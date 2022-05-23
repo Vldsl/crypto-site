@@ -1,0 +1,72 @@
+.header {
+	width: 100%;
+	padding: rem(10) 0;
+	background: #1B1B1B;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	&.fixed {
+		// padding: 1% 0;
+	}
+	&__inner {
+		min-height: rem(50);
+		// @include mq("desktop") {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			align-items: center;
+		// }
+	}
+	&__logo {
+		justify-self: start;
+	}
+	&__contact {
+		justify-self: center;
+		display: flex;
+		gap: rem(20);
+		&_phone {
+			font-weight: 500;
+			color: #FFFFFF;
+			@include mq("desktop") {
+				font-size: rem(18);
+				line-height: em(21.96, 18);
+			}
+		}
+		&_btn {
+			font-weight: 500;
+			color: #DA4533;
+			@include mq("desktop") {
+				font-size: rem(16);
+				line-height: em(26, 16);
+			}
+		}
+	}
+	&__menu {
+		justify-self: end;
+		&_icon {
+		}
+	}
+}
+.menu {
+	&__list {
+		@include mq("desktop") {
+			display: flex;
+		}
+	}
+	&__item {
+		& + & {
+			@include mq("desktop") {
+				margin: 0px 0px 0px em(35);
+			}
+		}
+	}
+	&__link {
+		font-weight: 500;
+		color: #fff;
+		@include mq("desktop") {
+			font-size: rem(16);
+			line-height: em(32, 16);
+		}
+	}
+}

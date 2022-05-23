@@ -1,0 +1,111 @@
+.intro {
+	@include flex-all-center;
+	position: relative;
+	// background-color: #1B1B1B;
+	// @include mq("tablet") {
+	// 	height: 100vh;
+	// }
+	&__inner {
+		@include mq("desktop") {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: rem(90);
+		}
+	}
+	&__content {
+		// Нужно переделать, назначитьэтот паддинг главному родителю
+		margin: 0px 0px 0px rem(14);
+		padding: 14.8% 0 11.2% 0; // 15%
+		flex: 1 1 50%;
+	}
+	&__suptitle {
+		margin: 0px 0px rem(6) 0px;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: #8A8A8A;
+		@include mq("desktop") {
+			font-size: rem(16);
+			line-height: em(26, 16);
+		}
+	}
+	&__title {
+		font-family: 'STIX Two Text', serif;
+		font-weight: 500;
+		color: #fff;
+		position: relative;
+		&:before,
+		&:after {
+			font-family: 'icomoon' !important;
+			speak: never;
+  		font-style: normal;
+  		font-weight: normal;
+  		font-variant: normal;
+  		text-transform: none;
+  		line-height: 1;
+  		-webkit-font-smoothing: antialiased;
+  		-moz-osx-font-smoothing: grayscale;
+			vertical-align: super;
+			color: #DA4533;
+			font-size: rem(15);
+		}
+		&:before {
+			position: absolute;
+			top: 10px;
+			left: -13px;
+			content: "\e901";
+			vertical-align: 32px; // rem
+		}
+		&:after {
+			content: "\e900";
+		}
+		@include mq("desktop") {
+			margin: 0px 0px em(17, 55) 0px;
+			font-size: rem(55);
+			line-height: em(74, 55);
+		}
+		& span {
+			font-style: italic;
+		}
+	}
+	&__text {
+		margin: 0px 0px 47px 0px;
+		font-weight: 400;
+		color: #8A8A8A;
+		@include mq("desktop") {
+			font-size: rem(18);
+			line-height: em(29, 18);
+		}
+	}
+	&__buttons {
+		display: flex;
+		align-items: center;
+		gap: 42px;
+		text-align: center;
+		&_btn {
+			width: 299px;
+			padding: rem(20);
+			font-weight: 500;
+			color: #fff;
+			border-radius: 50%;
+			background-color: #DA4533;
+			@include mq("desktop") {
+				font-size: rem(16);
+				line-height: em(26, 16);
+			}
+		}
+		&_link {
+			padding: rem(6) rem(20);
+			@include mq("desktop") {
+				font-size: rem(16);
+				line-height: em(26, 16);
+			}
+		}
+	}
+	&__img {
+		height: 400px;
+		flex: 1 1 auto;
+		img {
+		}
+	}
+}

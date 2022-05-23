@@ -1,0 +1,168 @@
+.team {
+	padding: rem(165) 0px rem(160) 0px;
+
+	&__title {
+		// font-size: 38px;
+		// line-height: 135%;
+		// /* or 51px */
+		color: #1B1B1B;
+	}
+	&__subtitle {
+		margin: 0px 0px 50px 0px;
+		width: 707px; // Change
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 160%;
+		/* or 26px */
+		color: #8A8A8A;
+	}
+	&__slider {
+
+	}
+	&__forums {
+
+	}
+}
+.slider-team {
+	margin: 0px 0px 75px 0px;
+	&__body {
+		margin: 0px 0px 35px 0px;
+		display: flex;
+		gap: 20px;
+	}
+	&__slide {
+		flex: 0 1 25%;
+		
+	}
+	&__image {
+		margin: 0px 0px 10px 0px;
+		border-radius: 8px;
+	}
+	&__info {
+		
+	}
+	&__author {
+		width: 250px; // Change!!!
+		margin: 0px 0px 5px 0px;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 160%;
+		/* or 29px */
+		color: #1B1B1B;
+	}
+	&__prof {
+		font-size: rem(14);
+		line-height: math.div(20, 14);
+		color: #5C5C5C;
+	}
+	&__control {
+		@include flex-all-center;
+		gap: 20px;
+		&_btn {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			border: 1px solid #DA4533;
+		}
+		.btn-next {
+			
+		}
+		.btn-prev {
+
+		}
+	}
+}
+.forums-team {
+	&__header {
+		margin: 0px 0px 73px 0px;
+		@include flex-all-sb;
+	}
+	&__title {
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 160%;
+		/* or 38px */
+		color: #1B1B1B;
+	}
+	&__control {
+		@include flex-v-center;
+		gap: 70px;
+	}
+	&__btn {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 160%;
+		/* identical to box height, or 26px */
+		color: #DA4533;
+		&.disabled {
+			color: #5C5C5C;
+		}
+	}
+	&__row {
+		@include flex-all-sb;
+
+		& + & {
+			margin-top: 40px;
+		}
+	}
+	&__author {
+		@include flex-v-center;
+		gap: 15px;
+		&_img {
+			border-radius: 50%;
+		}
+		&_info {
+	
+		}
+		&_name {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 160%;
+			/* identical to box height, or 26px */
+			color: #1B1B1B;
+		}
+		&_prof {
+			font-size: 14px;
+			line-height: 140%;
+			/* identical to box height, or 20px */
+			color: #5C5C5C;
+		}
+	}
+	&__place {
+		&_name {
+			margin: 0px 0px 15px 0px;
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 160%;
+			/* identical to box height, or 29px */
+			color: #1B1B1B;
+			border-bottom: 1px solid rgba(218, 69, 51, 1);
+			border-image: linear-gradient(to right, rgba(218, 69, 51, 1), rgba(218, 69, 51, 0));
+			border-image-slice: 1;
+		}
+		&_info {
+			// width: 495px;
+			font-size: 16px;
+			line-height: 160%;
+			/* or 26px */
+			color: #5C5C5C;
+		}
+	}
+	&__date {
+		&_day {
+			margin: 0px 0px 5px 0px;
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 160%;
+			/* identical to box height, or 29px */
+			color: #1B1B1B;
+		}
+		&_time {
+			font-size: 16px;
+			line-height: 160%;
+			/* identical to box height, or 26px */
+			color: #1B1B1B;
+			
+		}
+	}
+}

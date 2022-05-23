@@ -1,0 +1,126 @@
+.services {
+	padding: rem(160) 0 rem(164) 0;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	&__inner {
+		
+	}
+	&__title {
+		margin: 0px 0px 15px 0px;
+		font-family: $fontSecondary;
+		font-size: rem(38);
+		line-height: 135%;
+		/* or 51px */
+		color: #1B1B1B;
+	}
+	&__subtitle {
+		margin: 0px 0px rem(51) 0px;
+		display: flex;
+		justify-content: space-between;
+		&_text {
+			width: 700px;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 160%;
+			/* or 26px */
+			color: #8A8A8A;
+		}
+		&_link {
+			margin: 0px 16px 0px 0px;
+			padding: rem(6) rem(20);
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 160%;
+			color: #DA4533;
+		}
+	}
+	&__content {
+		
+	}
+	&__slider {
+
+	}
+}
+.slider {
+	&__container {
+		margin: 0px 0px 35px 0px;
+		display: flex;
+		justify-content: space-between;
+		gap: 5px;
+	}
+	&__item {
+		flex: 0 1 23.8%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: #1B1B1B;
+		border-radius: 8px;
+		padding: rem(82) rem(23) rem(20) rem(23);
+		position: relative;
+		&_img {
+			margin: 0px 0px rem(67) 0px;
+			align-self: center;
+			width: 165px;
+			img {
+
+			}
+		}
+		&_title {
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 160%;
+			/* or 29px */
+			color: #8A8A8A;
+		}
+		&_text {
+			display: none;
+			font-size: 14px;
+			line-height: 165%;
+			/* or 23px */
+			color: #8A8A8A;
+		}
+		&_arrow {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		}
+	}
+	&__buttons {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+		& > div {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			border: 1px solid #DA4533;
+			position: relative;
+			&:after {
+				content: "\e902";
+				position: absolute;
+				top: 50%;
+				right: -18px;
+				transform: translateY(-50%);
+				font-family: 'icomoon' !important;
+				speak: never;
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 1;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				color: #DA4533;
+				font-size: 8px;
+			}
+		}
+		&_btn_next {
+
+		}
+		&_btn_prev {
+
+		}
+	}
+}

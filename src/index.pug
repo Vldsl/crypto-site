@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+	head
+	include html/head
+	body(style="background-color: #1B1B1B;")
+		include html/sprite
+		.wrapper
+			include html/header
+			main.page
+				include html/intro
+				include html/exp
+				include html/services
+				include html/test
+				include html/case
+				include html/team
+			include html/footer
+		script(src="js/app.min.js")
+		//- Переписать классы по БЭМ`у
