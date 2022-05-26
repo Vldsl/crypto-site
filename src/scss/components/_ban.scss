@@ -1,0 +1,25 @@
+.ban {
+  padding: rem(79) 0 rem(79) 0;
+  &__inner {
+    @include flex-all-sb;
+  }
+  &__content {
+    flex: 0 1 50%;
+  }
+  &__title {
+    margin: 0 0 17px 0;
+  }
+  &__subtitle {
+    margin: 0 0 45px 0;
+    font-weight: 500;
+    line-height: math.div(26, 16);
+    color: $primaryAccentColor;
+    opacity: 0.75;
+  }
+  &__consult {
+    background: $secondaryAccentColor;
+  }
+  &__img {
+    width: 380px;
+  }
+}
