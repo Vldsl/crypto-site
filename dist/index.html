@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
     <meta name="theme-color" content="#111111">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/icomoon.css"><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,171 +22,174 @@
     </svg>
     <div class="wrapper">
       <header class="header"> 
-        <div class="container"> 
-          <div class="header__inner"> <a class="header__logo" href="#"><img src="./img/Header/logo.svg" alt="Logotype"></a>
-            <div class="header__contact">
-              <p class="header__contact_phone">+7 (888) 888 88 88</p>
-              <button class="header__contact_btn">Получить консультацию</button>
-            </div>
-            <div class="header__menu"> 
-              <div class="header__menu_icon"><span></span></div>
-              <div class="nav menu"> 
-                <ul class="menu__list"> 
-                  <li class="menu__item"> <a class="menu__link" href="#">Услуги</a></li>
-                  <li class="menu__item"> <a class="menu__link" href="#">Кейсы</a></li>
-                  <li class="menu__item"> <a class="menu__link" href="#">FAQ</a></li>
-                </ul>
-              </div>
-            </div>
+        <div class="header__container"> <a class="header__logo" href="#"><img src="./img/Header/logo.svg" alt="Logotype"></a>
+          <div class="header__contact">
+            <p class="header__contact_phone">+7 (888) 888 88 88</p>
+            <button class="header__contact_btn">Получить консультацию</button>
+          </div>
+          <div class="header__menu"> 
+            <button class="menu__icon icon-menu" type="button"><span></span></button>
+            <nav class="menu" style="background-image: url('./img/Menu/menu__bg.jpg');">
+              <ul class="menu__list"> 
+                <li class="menu__item"> <a class="menu__link" href="#">Услуги</a></li>
+                <li class="menu__item"> <a class="menu__link" href="#">Кейсы</a></li>
+                <li class="menu__item"> <a class="menu__link" href="#">FAQ</a></li>
+              </ul>
+            </nav>
           </div>
         </div>
       </header>
       <main class="page">
         <section class="intro" style="background-color: #1B1B1B;">
-          <div class="container"> 
-            <div class="intro__inner"> 
-              <div class="intro__content"> 
-                <div class="intro__suptitle">ВАШ IP ПАРТНЕР</div>
-                <h1 class="intro__title">Интеллектуальная <span>собственность</span></h1>
-                <div class="intro__text"> 
-                  <p>Индивидуальные правовые решения для защиты и охраны ваших нематериальных активов в России и за рубежом</p>
-                </div>
-                <div class="intro__buttons"> 
-                  <div class="intro__buttons_btn">Получить индивидуальную консультацию</div>
-                  <div class="intro__buttons_link btn-link">Все услуги</div>
-                </div>
+          <div class="intro__container"> 
+            <div class="intro__content"> 
+              <div class="intro__suptitle">ВАШ IP ПАРТНЕР</div>
+              <h1 class="intro__title icon-l-mark icon-r-mark">Интеллектуальная <span>собственность</span></h1>
+              <div class="intro__text"> 
+                <p>Индивидуальные правовые решения для защиты и охраны ваших нематериальных активов в России и за рубежом</p>
               </div>
-              <div class="intro__img"><img src="./img/Intro/intro-img-1.png" alt="Image on main page"></div>
+              <div class="intro__buttons">
+                <button class="intro__consult page-consult" type="button">Получить индивидуальную консультацию</button>
+                <div class="intro__link page-link icon-r-arrow">Все услуги</div>
+              </div>
             </div>
+            <div class="intro__img"><img src="./img/Intro/intro-img-1.png" alt="Image on main page"></div>
           </div>
         </section>
         <section class="exp">
-          <div class="container"> 
-            <div class="exp__inner">
-              <div class="exp__img"><img src="./img/Exp/exp-img.png" alt=""></div>
-              <div class="exp__content">
-                <div class="exp__block">
-                  <div class="exp__block_title">Многолетний опыт</div>
-                  <div class="exp__block_text"> 
-                    <p>Наша компания была создана в&nbsp;2019 году специалистами, имеющими опыт работы в&nbsp;сфере интеллектуальной собственности более 20&nbsp;лет</p>
+          <div class="exp__container"> 
+            <div class="exp__img"><img src="./img/Exp/exp-img.png" alt=""></div>
+            <div class="exp__content">
+              <div class="exp__block">
+                <h2 class="exp__block_title page-title">Многолетний опыт</h2>
+                <div class="exp__block_text"> 
+                  <p>Наша компания была создана в&nbsp;2019 году специалистами, имеющими опыт работы в&nbsp;сфере интеллектуальной собственности более 20&nbsp;лет</p>
+                </div>
+                <div class="exp__items"> 
+                  <div class="exp__item">
+                    <div class="exp__item_title">&gt;300</div>
+                    <p class="exp__item_text">Представления интересов <br> в&nbsp;спорах по&nbsp;IP правам в&nbsp;год</p>
                   </div>
-                  <div class="exp__items"> 
-                    <div class="exp__item">
-                      <div class="exp__item_title">&gt;300</div>
-                      <p class="exp__item_text">Представления интересов <br> в&nbsp;спорах по&nbsp;IP правам в&nbsp;год</p>
-                    </div>
-                    <div class="exp__item">
-                      <div class="exp__item_title">&gt;2500</div>
-                      <p class="exp__item_text">Оказаний юридической <br> помощи компаниям в&nbsp;год</p>
-                    </div>
-                    <div class="exp__item">
-                      <div class="exp__item_title">1150</div>
-                      <p class="exp__item_text">Завершённых дел <br> по&nbsp;регистрации товарных знаков</p>
-                    </div>
-                    <div class="exp__item">
-                      <div class="exp__item_title">61</div>
-                      <p class="exp__item_text">Совокупный опыт <br> экспертов</p>
-                    </div>
-                    <div class="exp__item">
-                      <div class="exp__item_title">99&#37;</div>
-                      <p class="exp__item_text">Успех получения <br> патентов</p>
-                    </div>
-                    <div class="exp__item">
-                      <div class="exp__item_title">98&#x25;</div>
-                      <p class="exp__item_text">Успех регистрации <br> товарных знаков</p>
-                    </div>
+                  <div class="exp__item">
+                    <div class="exp__item_title">&gt;2500</div>
+                    <p class="exp__item_text">Оказаний юридической <br> помощи компаниям в&nbsp;год</p>
+                  </div>
+                  <div class="exp__item">
+                    <div class="exp__item_title">1150</div>
+                    <p class="exp__item_text">Завершённых дел <br> по&nbsp;регистрации товарных знаков</p>
+                  </div>
+                  <div class="exp__item">
+                    <div class="exp__item_title">61</div>
+                    <p class="exp__item_text">Совокупный опыт <br> экспертов</p>
+                  </div>
+                  <div class="exp__item">
+                    <div class="exp__item_title">99&#37;</div>
+                    <p class="exp__item_text">Успех получения <br> патентов</p>
+                  </div>
+                  <div class="exp__item">
+                    <div class="exp__item_title">98&#x25;</div>
+                    <p class="exp__item_text">Успех регистрации <br> товарных знаков</p>
                   </div>
                 </div>
-                <div class="exp__block">
-                  <div class="exp__block_title">Подтвержденный практикой</div>
-                  <div class="exp__block_text"> 
-                    <p>Мы&nbsp;и&nbsp;наши клиенты гордимся опытом, который подтверждается нашими результатами от&nbsp;закрепления прав заявителей до&nbsp;успешной защиты интересов</p>
-                  </div>
-                  <div class="exp__items"> 
-                    <div class="exp__item item-logo"><img class="exp__item_img" src="./img/Exp/exp__logo_1.png" alt=""></div>
-                    <div class="exp__item item-logo"><img class="exp__item_img" src="./img/Exp/exp__logo_2.png" alt=""></div>
-                    <div class="exp__item item-logo"><img class="exp__item_img" src="./img/Exp/exp__logo_3.png" alt=""></div>
-                    <div class="exp__item item-logo"><img class="exp__item_img" src="./img/Exp/exp__logo_4.png" alt=""></div>
-                    <div class="exp__item item-logo"><img class="exp__item_img" src="./img/Exp/exp__logo_5.png" alt=""></div>
-                    <div class="exp__item item-logo"><img class="exp__item_img" src="./img/Exp/exp__logo_6.png" alt=""></div>
-                  </div>
+              </div>
+              <div class="exp__block">
+                <div class="exp__block_title page-title">Подтвержденный практикой</div>
+                <div class="exp__block_text"> 
+                  <p>Мы&nbsp;и&nbsp;наши клиенты гордимся опытом, который подтверждается нашими результатами от&nbsp;закрепления прав заявителей до&nbsp;успешной защиты интересов</p>
+                </div>
+                <div class="exp__items"> 
+                  <div class="exp__item item-logo"><img class="exp__item_img" src="./img/Exp/exp__logo_1.png" alt=""></div>
+                  <div class="exp__item item-logo"><img class="exp__item_img" src="./img/Exp/exp__logo_2.png" alt=""></div>
+                  <div class="exp__item item-logo"><img class="exp__item_img" src="./img/Exp/exp__logo_3.png" alt=""></div>
+                  <div class="exp__item item-logo"><img class="exp__item_img" src="./img/Exp/exp__logo_4.png" alt=""></div>
+                  <div class="exp__item item-logo"><img class="exp__item_img" src="./img/Exp/exp__logo_5.png" alt=""></div>
+                  <div class="exp__item item-logo"><img class="exp__item_img" src="./img/Exp/exp__logo_6.png" alt=""></div>
                 </div>
               </div>
             </div>
           </div>
         </section>
         <section class="services" style="background-image: url('./img/Services/services__bg.jpg')">
-          <div class="container">
-            <div class="services__inner">
-              <h2 class="services__title">Решения для вашего бизнеса</h2>
-              <div class="services__subtitle">
-                <p class="services__subtitle_text">У&nbsp;нас есть все необходимые ресурсы для решения любых ваших потребностей в&nbsp;сфере интеллектуальной собственности</p><a class="services__subtitle_link btn-link" href="">Все услуги</a>
+          <div class="services__container">
+            <div class="services__header page-header">
+              <h2 class="services__title page-title">Решения для вашего бизнеса</h2>
+              <div class="services__subtitle page-subtitle">
+                <p class="services__text page-text">У&nbsp;нас есть все необходимые ресурсы для решения любых ваших потребностей в&nbsp;сфере интеллектуальной собственности</p><a class="services__link page-link icon-r-arrow" href="">Все услуги</a>
               </div>
-              <div class="services__content">
-                <div class="services__slider slider">
-                  <div class="slider__container"> 
-                    <div class="slider__item">
-                      <div class="slider__item_img"><img src="./img/Services/services__img_1.png" alt=""></div>
-                      <div class="slider__item_title">Регистрация товарного знака в&nbsp;Роспатенте</div>
-                      <div class="slider__item_text">Регистрация прав инновационные устройства, способы или технологии</div><a class="slider__item_arrow" href=""></a>
-                    </div>
-                    <div class="slider__item">
-                      <div class="slider__item_img"><img src="./img/Services/services__img_2.png" alt=""></div>
-                      <div class="slider__item_title">Регистрация товарного знака в&nbsp;Роспатенте</div>
-                      <div class="slider__item_text">Регистрация прав инновационные устройства, способы или технологии</div><a class="slider__item_arrow" href=""></a>
-                    </div>
-                    <div class="slider__item">
-                      <div class="slider__item_img"><img src="./img/Services/services__img_3.png" alt=""></div>
-                      <div class="slider__item_title">Промышленные образцы</div>
-                      <div class="slider__item_text">Регистрация прав инновационные устройства, способы или технологии</div><a class="slider__item_arrow" href=""></a>
-                    </div>
-                    <div class="slider__item">
-                      <div class="slider__item_img"><img src="./img/Services/services__img_4.png" alt=""></div>
-                      <div class="slider__item_title">Программы для ЭВМ и&nbsp;Базы данных</div>
-                      <div class="slider__item_text">Регистрация прав инновационные устройства, способы или технологии</div><a class="slider__item_arrow" href=""></a>
-                    </div>
+            </div>
+            <div class="services__content">
+              <div class="services__slider slider-services swiper">
+                <div class="slider-services__body swiper-wrapper">
+                  <div class="slider-services__slide icon-shape swiper-slide">
+                    <div class="slider-services__img"><img src="./img/Services/services__img_1.png" alt=""></div>
+                    <h3 class="slider-services__title">Регистрация товарного знака в&nbsp;Роспатенте</h3>
+                    <div class="slider-services__text">Регистрация прав инновационные устройства, способы или технологии</div><a class="slider-services__link" href="#"></a>
                   </div>
-                  <div class="slider__buttons"> 
-                    <div class="slider__buttons_next"></div>
-                    <div class="slider__buttons_prev"></div>
+                  <div class="slider-services__slide icon-shape swiper-slide">
+                    <div class="slider-services__img"><img src="./img/Services/services__img_2.png" alt=""></div>
+                    <h3 class="slider-services__title">Регистрация товарного знака в&nbsp;Роспатенте</h3>
+                    <div class="slider-services__text">Регистрация прав инновационные устройства, способы или технологии</div><a class="slider-services__link" href=""></a>
                   </div>
+                  <div class="slider-services__slide icon-shape swiper-slide">
+                    <div class="slider-services__img"><img src="./img/Services/services__img_3.png" alt=""></div>
+                    <h3 class="slider-services__title">Промышленные образцы</h3>
+                    <div class="slider-services__text">Регистрация прав инновационные устройства, способы или технологии</div><a class="slider-services__link" href=""></a>
+                  </div>
+                  <div class="slider-services__slide icon-shape swiper-slide">
+                    <div class="slider-services__img"><img src="./img/Services/services__img_4.png" alt=""></div>
+                    <h3 class="slider-services__title">Программы для ЭВМ и&nbsp;Базы данных</h3>
+                    <div class="slider-services__text">Регистрация прав инновационные устройства, способы или технологии</div><a class="slider-services__link" href=""></a>
+                  </div>
+                  <div class="slider-services__slide icon-shape swiper-slide">
+                    <div class="slider-services__img"><img src="./img/Services/services__img_5.png" alt=""></div>
+                    <h3 class="slider-services__title">Представление интересов, суды</h3>
+                    <div class="slider-services__text">Регистрация прав инновационные устройства, способы или технологии</div><a class="slider-services__link" href=""></a>
+                  </div>
+                </div>
+                <div class="slider-services__control">
+                  <div class="slider-services__btn page-control icon-l-arrow slider-prev"></div>
+                  <div class="slider-services__btn page-control icon-r-arrow slider-next"></div>
                 </div>
               </div>
             </div>
           </div>
         </section>
         <section class="test" style="background-image: url('./img/Test/test__bg.jpg')">
-          <div class="container"> 
-            <h2 class="test__title">Не&nbsp;знаете, что вам нужно?</h2>
-            <p class="test__subtitle">Пройдите квиз, чтобы выбрать оптимальное решение для Вашей задачи</p>
-            <div class="test__quiz quiz"> 
-              <div class="quiz__header">
-                <div class="quiz__title">С&nbsp;какой целью вы&nbsp;обращаетесь?</div>
-                <div class="quiz__count"><span>2</span>/8</div>
+          <div class="test__container"> 
+            <div class="test__header page-header">
+              <h2 class="test__title page-title">Не&nbsp;знаете, что вам нужно?</h2>
+              <div class="test__subtitle page-subtitle">
+                <p class="test__text page-text">Пройдите квиз, чтобы выбрать оптимальное решение для Вашей задачи</p>
               </div>
-              <div class="quiz__body">
-                <div class="quiz__item">
-                  <p class="quiz__item_text">Регистрацию полезной модели</p>
+            </div>
+            <div class="test__quiz quiz-test">
+              <div class="quiz-test__header">
+                <div class="quiz-test__title">С&nbsp;какой целью вы&nbsp;обращаетесь?</div>
+                <div class="quiz-test__count"><span>2</span>/8</div>
+              </div>
+              <div class="quiz-test__body">
+                <div class="quiz-test__item">
+                  <p class="quiz-test__text">Регистрацию полезной модели</p>
                 </div>
-                <div class="quiz__item">
-                  <p class="quiz__item_text">Регистрацию промышленного образца</p>
+                <div class="quiz-test__item">
+                  <p class="quiz-test__text">Регистрацию промышленного образца</p>
                 </div>
-                <div class="quiz__item">
-                  <p class="quiz__item_text">Регистрацию прав на использование полезной модели, промобразца, изобретенния</p>
+                <div class="quiz-test__item">
+                  <p class="quiz-test__text">Регистрацию прав на использование полезной модели, промобразца, изобретенния</p>
                 </div>
-                <div class="quiz__item">
-                  <p class="quiz__item_text">Подготовка заявки на выдачу патента</p>
+                <div class="quiz-test__item">
+                  <p class="quiz-test__text">Подготовка заявки на выдачу патента</p>
                 </div>
-                <div class="quiz__item">
-                  <p class="quiz__item_text">Регистрацию изобретения</p>
+                <div class="quiz-test__item">
+                  <p class="quiz-test__text">Подготовка заявки на передачу прав патента</p>
                 </div>
-                <div class="quiz__item">
-                  <p class="quiz__item_text">Подготовка заявки на передачу прав патента</p>
+                <div class="quiz-test__item">
+                  <p class="quiz-test__text"> Регистрацию изобретения</p>
                 </div>
               </div>
-              <div class="quiz__control">
-                <div class="quiz__control_btn btn-next btn-link">Далее</div>
-                <div class="quiz__control_btn btn-prev btn-link">Назад</div>
+              <div class="quiz-test__control">
+                <div class="quiz-test__btn icon-l-arrow">Далее</div>
+                <div class="quiz-test__btn icon-r-arrow">Назад</div>
               </div>
             </div>
             <div class="test__bonus">
@@ -200,75 +204,99 @@
               </div>
             </div>
           </div>
+          <div class="test__img" src="" alt=""><img src="./img/Test/test__img.png" alt=""></div>
         </section>
         <section class="case" style="background-image: url('./img/Case/case__bg.jpg')">
-          <div class="container"> 
-            <h2 class="case__title">Реализованные кейсы</h2>
-            <div class="case__subtitle">
-              <p class="case__text">Наши реальные истории о том, как мы помогали своим клиентам регистрировать товарные знаки и оформлять права на объекты интеллектуальной собственности</p><a class="case__link btn-link" href="">Все кейсы</a>
-            </div>
-            <div class="case__slider slider"> 
-              <div class="slider__body">
-                <div class="slider__row">
-                  <div class="item-slider">
-                    <div class="item-slider__logo"><img src="./img/Case/case__logo_1.png" alt=""></div>
-                    <div class="item-slider__content">
-                      <h3 class="item-slider__title">CIRKLE — производитель косметической продукции</h3>
-                      <p class="item-slider__text">Как в результате защиты  мы зарегистрировали бренд российской косметики при наличии оснований для отказа</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="slider__row">
-                  <div class="item-slider">
-                    <div class="item-slider__logo"><img src="./img/Case/case__logo_2.png" alt=""></div>
-                    <div class="item-slider__content">
-                      <h3 class="item-slider__title">Camera IQ — производитель систем машинного зрения</h3>
-                      <p class="item-slider__text">Защита прав после ребрендинга. Как провести успешную регистрацию</p>
-                    </div>
-                  </div>
-                </div>
+          <div class="case__container">
+            <div class="case__header page-header"> 
+              <h2 class="case__title page-title">Реализованные кейсы</h2>
+              <div class="case__subtitle page-subtitle">
+                <p class="case__text page-text">Наши реальные истории о том, как мы помогали своим клиентам регистрировать товарные знаки и оформлять права на объекты интеллектуальной собственности</p><a class="case__link page-link icon-r-arrow" href="">Все кейсы</a>
               </div>
-              <div class="slider__control"> 
-                <div class="slider__control_btn btn-next btn-link"></div>
-                <div class="slider__control_btn btn-prev btn-link"></div>
+            </div>
+            <div class="case__content">
+              <div class="case__slider slider-case swiper">
+                <div class="slider-case__body swiper-wrapper">
+                  <div class="slider-case__slide icon-shape swiper-slide">
+                    <div class="slider-case__img"><img src="./img/Case/case__logo_1.png" alt=""></div>
+                    <div class="slider-case__content">
+                      <h3 class="slider-case__title">CIRKLE — производитель косметической продукции</h3>
+                      <p class="slider-case__text">Как в результате защиты  мы зарегистрировали бренд российской косметики при наличии оснований для отказа</p>
+                    </div>
+                  </div>
+                  <div class="slider-case__slide icon-shape swiper-slide">
+                    <div class="slider-case__img"><img src="./img/Case/case__logo_2.png" alt=""></div>
+                    <div class="slider-case__content">
+                      <h3 class="slider-case__title">Camera IQ — производитель систем машинного зрения</h3>
+                      <p class="slider-case__text">Защита прав после ребрендинга. Как провести успешную регистрацию</p>
+                    </div>
+                  </div>
+                  <div class="slider-case__slide icon-shape swiper-slide">
+                    <div class="slider-case__img"><img src="./img/Case/case__logo_3.png" alt=""></div>
+                    <div class="slider-case__content">
+                      <h3 class="slider-case__title">HANDS — производитель строительных материалов</h3>
+                      <p class="slider-case__text">Предварительный отказ — не приговор! Как мы защищали монополию российского производителя строительных материалов.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider-case__control"> 
+                  <div class="slider-case__btn page-control icon-l-arrow slider-prev"></div>
+                  <div class="slider-case__btn page-control icon-r-arrow slider-next"></div>
+                </div>
               </div>
             </div>
           </div>
         </section>
         <section class="team" style="background-image: url('./img/Team/team__bg.jpg')">
-          <div class="container">
-            <h2 class="team__title section__title">Команда экспертов</h2>
-            <p class="team__subtitle">Наша команда — эксперты в сфере IP. Мы берёмся за работу и доводим дело до конца, потому что понимаем ценности вашего бизнеса</p>
-            <div class="team__slider slider-team">
-              <div class="slider-team__body">
-                <div class="slider-team__slide"><img class="slider-team__image" src="./img/Team/team_img-1.jpg" alt="">
+          <div class="team__container">
+            <div class="team__header page-header">
+              <h2 class="team__title page-title">Команда экспертов</h2>
+              <div class="team__subtitle page-subtitle">
+                <p class="team__text page-text">Наша команда — эксперты в сфере IP. Мы берёмся за работу и доводим дело до конца, потому что понимаем ценности вашего бизнеса</p>
+              </div>
+            </div>
+            <div class="team__slider slider-team swiper">
+              <div class="slider-team__body swiper-wrapper">
+                <div class="slider-team__slide swiper-slide"><img class="slider-team__image" src="./img/Team/team_img-1.jpg" alt="">
                   <div class="slider-team__info">
-                    <h4 class="slider-team__author">Раймм Лидия Вячеславовна</h4>
+                    <h3 class="slider-team__author">Раймм Лидия Вячеславовна</h3>
                     <p class="slider-team__prof">Генеральный директор</p>
                   </div>
                 </div>
-                <div class="slider-team__slide"><img class="slider-team__image" src="./img/Team/team_img-2.jpg" alt="">
+                <div class="slider-team__slide swiper-slide"><img class="slider-team__image" src="./img/Team/team_img-2.jpg" alt="">
                   <div class="slider-team__info">
-                    <h4 class="slider-team__author">Золотов Геннадий Борисович</h4>
+                    <h3 class="slider-team__author">Золотов Геннадий Борисович</h3>
                     <p class="slider-team__prof">Руководитель отдела патентно-юридического делопроизводства</p>
                   </div>
                 </div>
-                <div class="slider-team__slide"><img class="slider-team__image" src="./img/Team/team_img-3.jpg" alt="">
+                <div class="slider-team__slide swiper-slide"><img class="slider-team__image" src="./img/Team/team_img-3.jpg" alt="">
                   <div class="slider-team__info">
-                    <h4 class="slider-team__author">Осоргина Екатерина Александровна</h4>
+                    <h3 class="slider-team__author">Осоргина Екатерина Александровна</h3>
                     <p class="slider-team__prof">Патентный поверенный РФ</p>
                   </div>
                 </div>
-                <div class="slider-team__slide"><img class="slider-team__image" src="./img/Team/team_img-4.jpg" alt="">
+                <div class="slider-team__slide swiper-slide"><img class="slider-team__image" src="./img/Team/team_img-4.jpg" alt="">
                   <div class="slider-team__info">
-                    <h4 class="slider-team__author">Рачеева ЮлияГеннадьевна</h4>
+                    <h3 class="slider-team__author">Рачеева Юлия Геннадьевна</h3>
                     <p class="slider-team__prof">Патентный поверенный РФ</p>
+                  </div>
+                </div>
+                <div class="slider-team__slide swiper-slide"><img class="slider-team__image" src="./img/Team/team_img-5.jpg" alt="">
+                  <div class="slider-team__info">
+                    <h3 class="slider-team__author">Рачеева Юлия Геннадьевна</h3>
+                    <p class="slider-team__prof">Адвокат</p>
+                  </div>
+                </div>
+                <div class="slider-team__slide swiper-slide"><img class="slider-team__image" src="./img/Team/team_img-1.jpg" alt="">
+                  <div class="slider-team__info">
+                    <h3 class="slider-team__author">Нигодина Вероника Анатольевна</h3>
+                    <p class="slider-team__prof">Маркетолог</p>
                   </div>
                 </div>
               </div>
               <div class="slider-team__control"> 
-                <div class="slider-team__control_btn btn-next btn-link"></div>
-                <div class="slider-team__control_btn btn-prev btn-link"></div>
+                <div class="slider-team__btn page-control icon-l-arrow slider-prev"></div>
+                <div class="slider-team__btn page-control icon-r-arrow slider-next"></div>
               </div>
             </div>
             <div class="team__forums forums-team">
@@ -279,43 +307,109 @@
                   <div class="forums-team__btn btn-next">Будущие</div>
                 </div>
               </div>
-              <div class="forums-team__row">
-                <div class="forums-team__author"><img class="forums-team__author_img" src="./img/Team/author_img-1.jpg" alt="">
-                  <div class="forums-team__author_info">
-                    <p class="forums-team__author_name">Раймм Лидия Вячеславовна</p>
-                    <p class="forums-team__author_prof">Генеральный директор IPhub</p>
+              <div class="forums-team__content">
+                <div class="forums-team__row">
+                  <div class="forums-team__author"><img class="forums-team__author_img" src="./img/Team/author_img-1.jpg" alt="">
+                    <div class="forums-team__author_info">
+                      <h4 class="forums-team__author_name">Раймм Лидия Вячеславовна</h4>
+                      <p class="forums-team__author_prof">Генеральный директор IPhub</p>
+                    </div>
+                  </div>
+                  <div class="forums-team__place">
+                    <p class="forums-team__place_name">Менторская гостинная</p>
+                    <p class="forums-team__place_info">Индивидуальная 30-ти минутная сессия с разбором вашего кейса.</p>
+                  </div>
+                  <div class="forums-team__date">
+                    <p class="forums-team__date_day">9-10 ноября</p>
+                    <p class="forums-team__date_time">18:00</p>
                   </div>
                 </div>
-                <div class="forums-team__place">
-                  <p class="forums-team__place_name">Менторская гостинная</p>
-                  <p class="forums-team__place_info">Индивидуальная 30-ти минутная сессия с разбором вашего кейса.</p>
-                </div>
-                <div class="forums-team__date">
-                  <p class="forums-team__date_day">9-10 ноября</p>
-                  <p class="forums-team__date_time">18:00</p>
-                </div>
-              </div>
-              <div class="forums-team__row">
-                <div class="forums-team__author"><img class="forums-team__author_img" src="./img/Team/author_img-2.jpg" alt="">
-                  <div class="forums-team__author_info">
-                    <p class="forums-team__author_name">Золотов Геннадий Борисович</p>
-                    <p class="forums-team__author_prof">Руководитель отдела патентно-юридического делопроизводства</p>
+                <div class="forums-team__row">
+                  <div class="forums-team__author"><img class="forums-team__author_img" src="./img/Team/author_img-2.jpg" alt="">
+                    <div class="forums-team__author_info">
+                      <h4 class="forums-team__author_name">Золотов Геннадий Борисович</h4>
+                      <p class="forums-team__author_prof">Руководитель отдела патентно-юридического делопроизводства</p>
+                    </div>
                   </div>
-                </div>
-                <div class="forums-team__place">
-                  <p class="forums-team__place_name">WIPO SUMMER SCHOOL — 2021 RUSSIA</p>
-                  <p class="forums-team__place_info">Летняя школа Всемирной организации интеллектуальной собственности</p>
-                </div>
-                <div class="forums-team__date">
-                  <p class="forums-team__date_day">28 июня - 9 июля</p>
-                  <p class="forums-team__date_time">15:30</p>
+                  <div class="forums-team__place">
+                    <p class="forums-team__place_name">WIPO SUMMER SCHOOL — 2021 RUSSIA</p>
+                    <p class="forums-team__place_info">Летняя школа Всемирной организации интеллектуальной собственности</p>
+                  </div>
+                  <div class="forums-team__date">
+                    <p class="forums-team__date_day">28 июня - <br> 9 июля</p>
+                    <p class="forums-team__date_time">15:30</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+        <section class="ban" style="background-image: url('./img/Ban/ban__bg.jpg')">
+          <div class="ban__container">
+            <div class="ban__content"> 
+              <div class="ban__header page-header">
+                <h2 class="ban__title page-title">Оставьте заявку на консультацию и мы вам поможем! </h2>
+                <div class="ban__subtitle page-subtitle">
+                  <p class="ban__text page-text">У нас есть решения для всех ваших потребностей в сфере защиты и регистрации интеллектуальной собственности</p>
+                </div>
+              </div>
+              <button class="ban__consult page-consult" type="button">Получить индивидуальную консультацию</button>
+            </div>
+            <div class="ban__img"> <img src="./img/Ban/ban__img.png" alt=""></div>
+          </div>
+        </section>
       </main>
+      <footer class="footer" style="background-image: url('./img/Footer/footer__bg.jpg')">
+        <div class="footer__container"> 
+          <div class="footer__top"><img class="footer__logo" src="./img/Footer/footer__logo.svg" alt="">
+            <p class="footer__descriptioon">Общество с ограниченной ответственностью «Центр интеллектуальной собственности и инноваций „АйПиХаб“»</p>
+            <div class="footer__location">
+              <p class="footer__street">123317, г. Москва, Пресненская наб., д. 8, стр. 1, эт. 3, п. 1, оф. 10</p>
+              <div class="footer__code"> 
+                <p>ИНН: <span>7703472433</span></p>
+                <p>КПП: <span>770301001</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="footer__body"> 
+            <div class="footer__column">
+              <h4 class="footer__title">Навигация по сайту:</h4>
+              <ul class="footer__nav">
+                <li class="footer__item"><a class="footer__link" href="">Услуги</a></li>
+                <li class="footer__item"><a class="footer__link" href="">Кейсы</a></li>
+                <li class="footer__item"><a class="footer__link" href=""> FAQ</a></li>
+              </ul>
+            </div>
+            <div class="footer__column">
+              <h4 class="footer__title">Наши контакты:</h4>
+              <ul class="footer__nav">
+                <li class="footer__item"><a class="footer__link" href="" mailto="">example@iphub.com</a></li>
+                <li class="footer__item"><a class="footer__link" href="" tel="">+7 (888) 888 88 88</a></li>
+              </ul>
+            </div>
+            <div class="footer__column footer__social">
+              <h4 class="footer__title">Мы в соцсетях:</h4>
+              <ul class="footer__nav">
+                <li class="footer__item"><a class="footer__link" href="">Facebook</a></li>
+                <li class="footer__item"><a class="footer__link" href="">Instagram</a></li>
+              </ul>
+            </div>
+            <div class="footer__column">
+              <h4 class="footer__title">Как добраться:</h4>
+              <ul class="footer__nav">
+                <li class="footer__item"><a class="footer__link" href="">Схема проезда</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__copy">
+            <p class="footer__rights">&copy;&nbsp;2021&nbsp;IPhub. Все права защищены.</p>
+            <p class="footer__offer">Публичная оферта</p>
+            <p class="footer__terms">Пользовательское соглашение</p>
+          </div>
+        </div>
+      </footer>
     </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/app.min.js"></script>
   </body>
 </html>

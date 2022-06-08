@@ -1,28 +1,29 @@
 section.test(style="background-image: url('./img/Test/test__bg.jpg')")
-	.container 
-		//- .test__inner 
-		h2.test__title Не&nbsp;знаете, что вам нужно?
-		p.test__subtitle Пройдите квиз, чтобы выбрать оптимальное решение для Вашей задачи
-		.test__quiz.quiz 
-			.quiz__header
-				.quiz__title С&nbsp;какой целью вы&nbsp;обращаетесь?
-				.quiz__count <span>2</span>/8
-			.quiz__body
-				.quiz__item
-					p.quiz__item_text Регистрацию полезной модели
-				.quiz__item
-					p.quiz__item_text Регистрацию промышленного образца
-				.quiz__item
-					p.quiz__item_text Регистрацию прав на использование полезной модели, промобразца, изобретенния
-				.quiz__item
-					p.quiz__item_text Подготовка заявки на выдачу патента
-				.quiz__item
-					p.quiz__item_text Регистрацию изобретения
-				.quiz__item
-					p.quiz__item_text Подготовка заявки на передачу прав патента
-			.quiz__control
-				.quiz__control_btn.btn-next.btn-link Далее
-				.quiz__control_btn.btn-prev.btn-link Назад
+	.test__container 
+		.test__header.page-header
+			h2.test__title.page-title Не&nbsp;знаете, что вам нужно?
+			.test__subtitle.page-subtitle
+				p.test__text.page-text Пройдите квиз, чтобы выбрать оптимальное решение для Вашей задачи
+		.test__quiz.quiz-test
+			.quiz-test__header
+				.quiz-test__title С&nbsp;какой целью вы&nbsp;обращаетесь?
+				.quiz-test__count <span>2</span>/8
+			.quiz-test__body
+				.quiz-test__item
+					p.quiz-test__text Регистрацию полезной модели
+				.quiz-test__item
+					p.quiz-test__text Регистрацию промышленного образца
+				.quiz-test__item
+					p.quiz-test__text Регистрацию прав на использование полезной модели, промобразца, изобретенния
+				.quiz-test__item
+					p.quiz-test__text Подготовка заявки на выдачу патента
+				.quiz-test__item
+					p.quiz-test__text Подготовка заявки на передачу прав патента
+				.quiz-test__item
+					p.quiz-test__text  Регистрацию изобретения
+			.quiz-test__control
+				.quiz-test__btn.icon-l-arrow Далее
+				.quiz-test__btn.icon-r-arrow Назад
 		.test__bonus
 			h3.test__bonus_title Бонусы после прохождения
 			.test__bonus_body
@@ -32,3 +33,5 @@ section.test(style="background-image: url('./img/Test/test__bg.jpg')")
 				.test__bonus_item
 					img.test__bonus_img(src="./img/Test/bonus__img_2.png", alt="")
 					p.test__bonus_text Название бонуса в&nbsp;одну или две строки
+	.test__img(src="", alt="")
+		img(src="./img/Test/test__img.png", alt="")

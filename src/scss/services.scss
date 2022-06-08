@@ -1,0 +1,157 @@
+@use "sass:math";
+@use "sass:map";
+
+@import "vars";
+@import "mixins";
+/*--------------------*/
+/*** Null ***/
+@import "null";
+/*--------------------*/
+/*** Fonts ***/
+// @import "fonts";
+// @import "iconsfont";
+/*--------------------*/
+a,
+button {
+  transition: 0.2s;
+}
+body {
+  font-family: $fontFamily;
+  @include font-source-sans(rem($fontSize), 1.1, 400, $primaryColor);
+  font-style: normal;
+  text-align: left;
+  position: relative;
+  &.lock {
+    overflow: hidden;
+    touch-action: none;
+  }
+}
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  > main {
+    flex: 1 1 auto;
+  }
+}
+
+.page {
+  &-title {
+    margin: 0 0 18px 0;
+    font-family: $fontSecondary;
+    color: $primaryAccentColor;
+    font-size: rem(38);
+    line-height: math.div(51, 38);
+  }
+  &-consult {
+    width: em(300, 16);
+    padding: em(20, 16);
+    font-weight: 500;
+    line-height: math.div(26, 16);
+    color: $primaryAccentColor;
+    border-radius: 50%;
+    background-color: $brandColor;
+    @include flex-all-center;
+    position: relative;
+    &:after,
+    &:before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #da4533;
+      font-size: 8px;
+    }
+    &:before {
+      left: -18px;
+    }
+    &:after {
+      right: -18px;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &-link {
+    padding: em(6, 16) em(20, 16);
+    @include flex-all-center;
+    font-weight: 500;
+    line-height: math.div(26, 16);
+    color: $brandColor;
+    border: 1px solid #da4533;
+    border-radius: 50%;
+    position: relative;
+    &:after,
+    &:before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #da4533;
+      font-size: 8px;
+    }
+    &:before {
+      left: -18px;
+    }
+    &:after {
+      right: -18px;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &-control {
+    @include flex-all-center;
+    width: 40px;
+    height: 40px;
+    color: #da4533;
+    border: 1px solid #da4533;
+    border-radius: 50%;
+    position: relative;
+    &:after,
+    &:before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #da4533;
+      font-size: 8px;
+    }
+    &:before {
+      left: -18px;
+    }
+    &:after {
+      right: -18px;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: rem($maxWidthContainer); // 1216px
+  margin: auto;
+  padding: 0 rem(math.div($containerPadding, 2));
+}
+section {
+  width: 100%;
+  padding: rem(160) 0;
+  @include bg-cover;
+}
+
+@import "components/header";
+@import "components/intro";
+@import "components/exp";
+@import "components/services";
+@import "components/test";
+@import "components/case";
+@import "components/team";
+@import "components/ban";
+@import "components/footer";

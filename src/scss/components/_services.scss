@@ -1,126 +1,92 @@
 .services {
-	padding: rem(160) 0 rem(164) 0;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	&__inner {
-		
-	}
-	&__title {
-		margin: 0px 0px 15px 0px;
-		font-family: $fontSecondary;
-		font-size: rem(38);
-		line-height: 135%;
-		/* or 51px */
-		color: #1B1B1B;
-	}
-	&__subtitle {
-		margin: 0px 0px rem(51) 0px;
-		display: flex;
-		justify-content: space-between;
-		&_text {
-			width: 700px;
-			font-weight: 500;
-			font-size: 16px;
-			line-height: 160%;
-			/* or 26px */
-			color: #8A8A8A;
-		}
-		&_link {
-			margin: 0px 16px 0px 0px;
-			padding: rem(6) rem(20);
-			font-weight: 500;
-			font-size: 16px;
-			line-height: 160%;
-			color: #DA4533;
-		}
-	}
-	&__content {
-		
-	}
-	&__slider {
-
-	}
+  &__container &__header {
+  }
+  &__title {
+    color: #1b1b1b;
+  }
+  &__subtitle {
+  }
+  &_text {
+  }
+  &_link {
+  }
+  &__content {
+    // Убрать класс или добавить такой же и в case и возможно остальным. чтобы был оберткой контенту, если он будет увеличиваться, или там будет только слайдер, но допустим можно задать какие-нибудь стили для безопасности если контента станет больше
+  }
+  &__slider {
+  }
 }
-.slider {
-	&__container {
-		margin: 0px 0px 35px 0px;
-		display: flex;
-		justify-content: space-between;
-		gap: 5px;
-	}
-	&__item {
-		flex: 0 1 23.8%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		background-color: #1B1B1B;
-		border-radius: 8px;
-		padding: rem(82) rem(23) rem(20) rem(23);
-		position: relative;
-		&_img {
-			margin: 0px 0px rem(67) 0px;
-			align-self: center;
-			width: 165px;
-			img {
-
-			}
-		}
-		&_title {
-			font-weight: 500;
-			font-size: 18px;
-			line-height: 160%;
-			/* or 29px */
-			color: #8A8A8A;
-		}
-		&_text {
-			display: none;
-			font-size: 14px;
-			line-height: 165%;
-			/* or 23px */
-			color: #8A8A8A;
-		}
-		&_arrow {
-			position: absolute;
-			top: 10px;
-			right: 10px;
-		}
-	}
-	&__buttons {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 20px;
-		& > div {
-			width: 40px;
-			height: 40px;
-			border-radius: 50%;
-			border: 1px solid #DA4533;
-			position: relative;
-			&:after {
-				content: "\e902";
-				position: absolute;
-				top: 50%;
-				right: -18px;
-				transform: translateY(-50%);
-				font-family: 'icomoon' !important;
-				speak: never;
-				font-style: normal;
-				font-weight: normal;
-				font-variant: normal;
-				text-transform: none;
-				line-height: 1;
-				-webkit-font-smoothing: antialiased;
-				-moz-osx-font-smoothing: grayscale;
-				color: #DA4533;
-				font-size: 8px;
-			}
-		}
-		&_btn_next {
-
-		}
-		&_btn_prev {
-
-		}
-	}
+.slider-services {
+  &__body {
+    margin: 0 0 35px 0;
+  }
+  &__slide {
+    height: 400px; // change
+    margin: 0 rem(20) 0 0;
+    padding: rem(82) rem(23) rem(20) rem(23);
+    @include flex-column-center;
+    background-color: #1b1b1b;
+    border-radius: 8px;
+    position: relative;
+    transition: all 0.3s;
+    overflow: hidden;
+    &:before {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #5c5c5c;
+      font-size: 40px;
+      z-index: 2;
+    }
+    &:hover {
+      cursor: pointer;
+      transition: all 0.3s;
+      & .slider-services__link {
+        opacity: 0.3;
+        transition: opacity 0.2s;
+      }
+      &:before {
+        color: #fff;
+        transition: all 0.2s;
+      }
+      & .slider-services__img {
+        transform: scale(0.8);
+        transition: all 0.5s;
+      }
+      & .slider-services__title {
+        transition: all 0.3s;
+        color: #fff;
+      }
+      & .slider-services__text {
+        height: 100%;
+        opacity: 1;
+        transition: all 0.3s;
+      }
+    }
+  }
+  &__img {
+    flex: 1 1 auto;
+  }
+  &__title {
+    margin: 0 0 rem(5) 0;
+    @include font-source-sans(rem(18), math.div(29, 18), 500, #8a8a8a);
+    transition: all 0.3s;
+    position: relative;
+    z-index: 2;
+  }
+  &__text {
+    opacity: 0;
+    height: 0;
+    font-size: rem(14);
+    line-height: math.div(23, 14);
+    transition: all 0.3s;
+  }
+  &__link {
+  }
+  &__control {
+    @include flex-all-center;
+    gap: 20px;
+  }
+  &__btn {
+  }
 }

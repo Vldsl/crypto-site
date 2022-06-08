@@ -1,71 +1,72 @@
 section.team(style="background-image: url('./img/Team/team__bg.jpg')")
-	.container
-		h2.team__title.section__title Команда экспертов
-		p.team__subtitle Наша команда — эксперты в сфере IP. Мы берёмся за работу и доводим дело до конца, потому что понимаем ценности вашего бизнеса
-		.team__slider.slider-team
-			.slider-team__body
-				.slider-team__slide
+	.team__container
+		.team__header.page-header
+			h2.team__title.page-title Команда экспертов
+			.team__subtitle.page-subtitle
+				p.team__text.page-text Наша команда — эксперты в сфере IP. Мы берёмся за работу и доводим дело до конца, потому что понимаем ценности вашего бизнеса
+		.team__slider.slider-team.swiper
+			.slider-team__body.swiper-wrapper
+				.slider-team__slide.swiper-slide
 					img.slider-team__image(src="./img/Team/team_img-1.jpg", alt="")
 					.slider-team__info
-						h4.slider-team__author Раймм Лидия Вячеславовна
+						h3.slider-team__author Раймм Лидия Вячеславовна
 						p.slider-team__prof Генеральный директор
-				.slider-team__slide
+				.slider-team__slide.swiper-slide
 					img.slider-team__image(src="./img/Team/team_img-2.jpg", alt="")
 					.slider-team__info
-						h4.slider-team__author Золотов Геннадий Борисович
+						h3.slider-team__author Золотов Геннадий Борисович
 						p.slider-team__prof Руководитель отдела патентно-юридического делопроизводства
-				.slider-team__slide
+				.slider-team__slide.swiper-slide
 					img.slider-team__image(src="./img/Team/team_img-3.jpg", alt="")
 					.slider-team__info
-						h4.slider-team__author Осоргина Екатерина Александровна
+						h3.slider-team__author Осоргина Екатерина Александровна
 						p.slider-team__prof Патентный поверенный РФ
-				.slider-team__slide
+				.slider-team__slide.swiper-slide
 					img.slider-team__image(src="./img/Team/team_img-4.jpg", alt="")
 					.slider-team__info
-						h4.slider-team__author Рачеева ЮлияГеннадьевна
+						h3.slider-team__author Рачеева Юлия Геннадьевна
 						p.slider-team__prof Патентный поверенный РФ
-				//- .slider-team__slide
-				//- 	img.slider-team__image(src="./img/Team/team_img-5.jpg", alt="")
-				//- 	.slider-team__info
-				//- 		h4.slider-team__author Рачеева Юлия Геннадьевна
-				//- 		p.slider-team__prof Адвокат
-				//- .slider-team__slide
-				//- 	img.slider-team__image(src="./img/Team/team_img-1.jpg", alt="")
-				//- 	.slider-team__info
-				//- 		h4.slider-team__author Нигодина Вероника Анатольевна
-				//- 		p.slider-team__prof Маркетолог
+				.slider-team__slide.swiper-slide
+					img.slider-team__image(src="./img/Team/team_img-5.jpg", alt="")
+					.slider-team__info
+						h3.slider-team__author Рачеева Юлия Геннадьевна
+						p.slider-team__prof Адвокат
+				.slider-team__slide.swiper-slide
+					img.slider-team__image(src="./img/Team/team_img-1.jpg", alt="")
+					.slider-team__info
+						h3.slider-team__author Нигодина Вероника Анатольевна
+						p.slider-team__prof Маркетолог
 			.slider-team__control 
-				.slider-team__control_btn.btn-next.btn-link
-				.slider-team__control_btn.btn-prev.btn-link
+				.slider-team__btn.page-control.icon-l-arrow.slider-prev
+				.slider-team__btn.page-control.icon-r-arrow.slider-next
 		.team__forums.forums-team
 			.forums-team__header 
 				.forums-team__title Мы на форумах
 				.forums-team__control
 					.forums-team__btn.btn-prev.disabled Прошедшие
 					.forums-team__btn.btn-next Будущие
-			.forums-team__row
-				.forums-team__author
-					img.forums-team__author_img(src="./img/Team/author_img-1.jpg", alt="")
-					.forums-team__author_info
-						//-p заменить на h
-						p.forums-team__author_name Раймм Лидия Вячеславовна
-						p.forums-team__author_prof Генеральный директор IPhub
-				.forums-team__place
-					p.forums-team__place_name Менторская гостинная
-					p.forums-team__place_info Индивидуальная 30-ти минутная сессия с разбором вашего кейса.
-				.forums-team__date
-					p.forums-team__date_day 9-10 ноября
-					p.forums-team__date_time 18:00
-			.forums-team__row
-				.forums-team__author
-					img.forums-team__author_img(src="./img/Team/author_img-2.jpg", alt="")
-					.forums-team__author_info
-						//-p заменить на h
-						p.forums-team__author_name Золотов Геннадий Борисович
-						p.forums-team__author_prof Руководитель отдела патентно-юридического делопроизводства
-				.forums-team__place
-					p.forums-team__place_name WIPO SUMMER SCHOOL — 2021 RUSSIA
-					p.forums-team__place_info Летняя школа Всемирной организации интеллектуальной собственности
-				.forums-team__date
-					p.forums-team__date_day 28 июня - 9 июля
-					p.forums-team__date_time 15:30
+			.forums-team__content
+				.forums-team__row
+					.forums-team__author
+						img.forums-team__author_img(src="./img/Team/author_img-1.jpg", alt="")
+						.forums-team__author_info
+							h4.forums-team__author_name Раймм Лидия Вячеславовна
+							p.forums-team__author_prof Генеральный директор IPhub
+					.forums-team__place
+						p.forums-team__place_name Менторская гостинная
+						p.forums-team__place_info Индивидуальная 30-ти минутная сессия с разбором вашего кейса.
+					.forums-team__date
+						p.forums-team__date_day 9-10 ноября
+						p.forums-team__date_time 18:00
+				.forums-team__row
+					.forums-team__author
+						img.forums-team__author_img(src="./img/Team/author_img-2.jpg", alt="")
+						.forums-team__author_info
+							h4.forums-team__author_name Золотов Геннадий Борисович
+							p.forums-team__author_prof Руководитель отдела патентно-юридического делопроизводства
+					.forums-team__place
+						p.forums-team__place_name WIPO SUMMER SCHOOL — 2021 RUSSIA
+						p.forums-team__place_info Летняя школа Всемирной организации интеллектуальной собственности
+					.forums-team__date
+						p.forums-team__date_day 28 июня - <br> 9 июля
+						p.forums-team__date_time 15:30

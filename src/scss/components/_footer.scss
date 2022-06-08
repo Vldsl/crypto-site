@@ -1,2 +1,180 @@
 .footer {
+  padding: rem(100) 0 rem(50) 0;
+  &__container {
+  }
+  &__top {
+    margin: 0 0 rem(50) 0;
+    padding: 0 0 50px 0;
+    display: grid;
+    grid-template-columns: auto 1fr 0.4fr 0.7fr;
+    justify-content: space-between;
+    align-items: start;
+    gap: 20px;
+    border-bottom: 1px solid rgba(140, 140, 140, 1);
+    border-image: linear-gradient(
+      to right,
+      rgba(140, 140, 140, 1),
+      rgba(140, 140, 140, 0.5),
+      rgba(166, 166, 166, 0)
+    );
+    border-image-slice: 1;
+    @include mq("tablet") {
+      grid-template-columns: auto 1fr 0.4fr 0.7fr;
+    }
+    @include mq("phone-wide", range, "tablet-small") {
+    }
+  }
+  &__logo {
+    @include mq("tablet-small", max) {
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+  }
+  &__descriptioon {
+    justify-self: start;
+    font-size: rem(14);
+    line-height: math.div(23, 14);
+    color: $primaryColor;
+    @include mq("tablet", max) {
+      grid-column-start: 2;
+      grid-column-end: 5;
+    }
+    @include mq("tablet-small", max) {
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+  }
+  &__location {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    justify-self: end;
+    font-size: rem(14);
+    line-height: math.div(23, 14);
+    color: $primaryColor;
+    @include mq("tablet", max) {
+      grid-column-start: 2;
+      grid-column-end: 5;
+      justify-self: start;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    @include mq("tablet-small", max) {
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+    @include mq("phone-wide", max) {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+  &__street {
+    margin: 0;
+    font-size: rem(14);
+    line-height: math.div(23, 14);
+    color: #fff;
+    @include mq("phone-wide", range, "tablet") {
+      flex: 0 0 50%;
+    }
+  }
+  &__code {
+    @include flex-v-center;
+    @include mq("tablet", max) {
+      flex-direction: column;
+      align-items: start;
+    }
+    @include mq("tablet") {
+      margin: 10px 0 0 0;
+      gap: 15px;
+    }
+    & p {
+      margin: 0;
+    }
+    & span {
+      color: #fff;
+    }
+  }
+  &__body {
+    @include flex-sb;
+    flex-wrap: wrap;
+    margin: 0 0 50px 0;
+    @include mq("tablet-small", max) {
+      margin: 0 0 rem(30) 0;
+    }
+  }
+  &__column {
+    &:last-child {
+      @include mq("tablet", max) {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0 0 20px 0;
+    @include font-source-sans(rem(18), math.div(29, 18), 500, $secondaryColor);
+    @include mq("phone-wide", max) {
+      font-size: rem(16);
+      line-height: math.div(26, 16);
+    }
+  }
+  &__nav {
+  }
+  &__item {
+    & + & {
+      margin: 15px 0 0 0;
+    }
+  }
+  &__social {
+    @include mq("tablet-small", max) {
+      flex: 0 1 50%;
+      margin: 0 0 rem(20) 0;
+      & h4 {
+        margin: 10px 0 0 0;
+      }
+    }
+    & > ul {
+      @include mq("tablet-small", max) {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        & li {
+          margin: 15px 0 0 0; // Плохой вариант решения проблемы
+        }
+      }
+    }
+  }
+  &__link {
+    font-weight: 500;
+    line-height: math.div(26, 16);
+    color: $primaryAccentColor;
+    @include mq("phone-wide", max) {
+      font-size: rem(14);
+      line-height: math.div(22, 14);
+    }
+  }
+  &__copy {
+    font-size: rem(14);
+    line-height: math.div(23, 14);
+    color: $primaryAccentColor;
+    @include flex-sb;
+    @include mq("tablet-small", max) {
+      flex-direction: column-reverse;
+      gap: 10px;
+    }
+    @include mq("phone-wide", max) {
+      font-size: rem(12);
+      line-height: math.div(20, 12);
+    }
+    p {
+      margin: 0;
+    }
+  }
+  &__rights {
+    color: $primaryColor;
+  }
+  &__offer {
+  }
+  &__terms {
+  }
 }

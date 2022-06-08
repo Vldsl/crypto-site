@@ -1,92 +1,127 @@
 .exp {
-	padding: rem(79) 0 rem(141) 0;
-	&__inner {
-		display: flex;
-		gap: rem(67);
-		// @include mq("desktop") {
-		// }
-	}
-	&__img {
-		flex: 0 0 345px;  // change
-		// @include mq("desktop") {
-		// }
-		img {
-
-		}
-	}
-	&__content {
-		flex: 1 1 auto;
-	}
-	&__block {
-		& + & {
-			margin: rem(80) 0px 0px 0px;
-		}
-		&_title {
-			margin: 0px 0px rem(16) 0px;
-			font-family: $fontSecondary;
-			color: #fff;
-			@include mq("desktop") {
-				font-size: rem(38);
-				line-height: em(51, 38);
-			}
-		}
-		&_text {
-			margin: 0px 0px rem(50) 0px;
-			font-weight: 500;
-			color: #8A8A8A;
-			@include mq("desktop") {
-				font-size: rem(16);
-				line-height: em(26, 16);
-			}
-		}
-	}
-	&__items {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
-	&__item {
-		margin: 0px 0px rem(20) 0px;
-		padding: rem(20);
-		border-radius: rem(8);
-		flex: 0 1 48.8%;
-		background-color: #202020;
-		position: relative;
-		&:before {
-			content: '';
-			position: absolute;
-			top: -3px;
-			right: -2px;
-			bottom: -2px;
-			left: -3px;
-			background: linear-gradient(135deg, rgba(218, 69, 51, 1), rgba(218, 69, 51, 0) 30%);
-			border-radius: rem(10);
-			z-index: -1;
-		}
-		&.item-logo {
-			height: 119px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-		&_title {
-			font-family: $fontSecondary;
-			font-weight: 500;
-			color: #fff;
-			@include mq("desktop") {
-				font-size: rem(36);
-				line-height: em(45, 36);
-			}
-		}
-		&_text {
-			color: #8A8A8A;
-			@include mq("desktop") {
-				font-size: rem(16);
-				line-height: em(26, 16);
-			}
-		}
-		&_img {
-			
-		}
-	}
+  padding: rem(79) 0 rem(160) 0;
+  @include mq("tablet", range, "desktop") {
+    padding: rem(79) 0 rem(120) 0;
+  }
+  &__container {
+    @include flex-sb;
+    gap: rem(67);
+    @include mq("tablet", range, "desktop") {
+      gap: rem(55);
+    }
+  }
+  &__img {
+    flex: 1 1 auto;
+    @include mq("tablet", max) {
+      display: none;
+    }
+  }
+  &__content {
+    flex: 0 1 66%;
+    @include mq("tablet", range, "desktop") {
+      flex: 0 1 84%;
+    }
+    @include mq("tablet", max) {
+      flex: 0 1 100%;
+    }
+  }
+  &__block {
+    & + & {
+      margin: rem(100) 0 0 0;
+      @include mq("tablet", range, "desktop") {
+        margin: rem(85) 0 0 0;
+      }
+    }
+    &_title {
+      @include mq("tablet", range, "desktop") {
+        margin: 0 0 rem(15) 0;
+      }
+    }
+    &_text {
+      margin: 0 0 rem(50) 0;
+      font-weight: 500;
+      line-height: math.div(26, 16);
+      @include mq("tablet", range, "desktop") {
+        margin: 0 0 rem(39) 0;
+      }
+    }
+  }
+  &__items {
+    @include flex-sb;
+    flex-wrap: wrap;
+    gap: rem(19);
+    @include mq("tablet", range, "desktop") {
+      gap: rem(16);
+    }
+  }
+  &__item {
+    padding: rem(20);
+    border-radius: rem(8);
+    flex: 1 1 47%;
+    background-color: #202020;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: -3px;
+      right: -2px;
+      bottom: -2px;
+      left: -3px;
+      background: linear-gradient(
+        135deg,
+        rgba(218, 69, 51, 1),
+        rgba(218, 69, 51, 0) 30%
+      );
+      border-radius: rem(10);
+      z-index: -1;
+    }
+    @include mq("phone-wide", max) {
+      flex: 1 1 100%;
+    }
+    @include mq("phone-wide", max) {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    &.item-logo {
+      height: 119px;
+      @include flex-all-center;
+      @include mq("tablet", range, "desktop") {
+        height: 95px;
+        padding: 22px 47px;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+      @include mq("tablet-small", max) {
+        flex: 1 1 100%;
+      }
+    }
+    &_title {
+      font-family: $fontSecondary;
+      font-weight: 500;
+      color: #fff;
+      font-size: rem(36);
+      line-height: math.div(45, 36);
+      @include mq("phone-wide", range, "tablet-small") {
+        font-size: rem(28);
+        line-height: math.div(35, 28);
+      }
+      @include mq("phone-wide", max) {
+        font-size: rem(24);
+        line-height: math.div(30, 24);
+      }
+    }
+    &_text {
+      line-height: math.div(26, 16);
+      @include mq("phone-wide", max) {
+        font-size: rem(14);
+        line-height: math.div(23, 14);
+      }
+    }
+    &_img {
+    }
+  }
 }

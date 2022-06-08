@@ -1,111 +1,159 @@
 .intro {
 	@include flex-all-center;
-	position: relative;
-	// background-color: #1B1B1B;
-	// @include mq("tablet") {
-	// 	height: 100vh;
-	// }
-	&__inner {
-		@include mq("desktop") {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			gap: rem(90);
+	// position: relative;
+	padding: 7.8% 0 5.5% 0;
+
+	@include mq("tablet", range, "desktop") {
+		padding: 18% 0 5.5% 0;
+	}
+
+	@include mq("tablet-small", range, "tablet") {
+		padding: 18% 0 0 0;
+	}
+
+	@include mq("phone-wide", range, "tablet-small") {
+		padding: 28% 0 0 0;
+	}
+
+	@include mq("phone-wide", max) {
+		padding: 31% 0 0 0;
+	}
+
+	&__container {
+		@include flex-all-sb;
+		gap: rem(90);
+
+		@include mq("tablet", range, "desktop") {
+			gap: rem(72);
 		}
 	}
+
 	&__content {
-		// Нужно переделать, назначитьэтот паддинг главному родителю
-		margin: 0px 0px 0px rem(14);
-		padding: 14.8% 0 11.2% 0; // 15%
-		flex: 1 1 50%;
+		margin: 0 0 0 rem(14);
+		flex: 0 0 50%;
+
+		@include mq("tablet-small", max) {
+			flex: 1 1 100%;
+			text-align: center;
+		}
 	}
+
 	&__suptitle {
-		margin: 0px 0px rem(6) 0px;
+		margin: 0 0 rem(6) 0;
 		font-weight: 500;
 		text-transform: uppercase;
-		color: #8A8A8A;
-		@include mq("desktop") {
-			font-size: rem(16);
-			line-height: em(26, 16);
+
+		@include mq("phone-wide") {
+			line-height: math.div(26, 16);
+		}
+
+		@include mq("tablet", range, "desktop") {
+			margin: 0 0 rem(8) 0;
+		}
+
+		@include mq("phone-wide", max) {
+			font-size: rem(14);
+			line-height: math.div(22, 14);
 		}
 	}
+
 	&__title {
-		font-family: 'STIX Two Text', serif;
-		font-weight: 500;
-		color: #fff;
+		font-family: $fontSecondary;
+		margin: 0 0 em(17, 55) 0;
+		@include font-source-sans(rem(55),
+			math.div(74, 55),
+			500,
+			$primaryAccentColor );
 		position: relative;
+
 		&:before,
 		&:after {
-			font-family: 'icomoon' !important;
-			speak: never;
-  		font-style: normal;
-  		font-weight: normal;
-  		font-variant: normal;
-  		text-transform: none;
-  		line-height: 1;
-  		-webkit-font-smoothing: antialiased;
-  		-moz-osx-font-smoothing: grayscale;
 			vertical-align: super;
-			color: #DA4533;
+			color: #da4533;
 			font-size: rem(15);
 		}
+
 		&:before {
 			position: absolute;
 			top: 10px;
 			left: -13px;
-			content: "\e901";
 			vertical-align: 32px; // rem
 		}
-		&:after {
-			content: "\e900";
-		}
-		@include mq("desktop") {
-			margin: 0px 0px em(17, 55) 0px;
-			font-size: rem(55);
-			line-height: em(74, 55);
-		}
+
 		& span {
 			font-style: italic;
 		}
+
+		@include mq("tablet", range, "desktop") {
+			font-size: rem(48);
+			line-height: math.div(65, 48); // 1,35
+		}
+
+		@include mq("phone-wide", range, "tablet") {
+			font-size: rem(44);
+			line-height: math.div(59, 44); // 1,34
+		}
+
+		@include mq("phone-wide", max) {
+			font-size: rem(34);
+			line-height: math.div(46, 34); // 1,35
+		}
 	}
+
 	&__text {
-		margin: 0px 0px 47px 0px;
-		font-weight: 400;
-		color: #8A8A8A;
-		@include mq("desktop") {
-			font-size: rem(18);
-			line-height: em(29, 18);
+		margin: 0 0 47px 0;
+		font-size: rem(18);
+		line-height: math.div(29, 18);
+
+		@include mq("phone-wide", range, "desktop") {
+			font-size: rem(16);
+			line-height: math.div(26, 16);
+		}
+
+		@include mq("phone-wide", max) {
+			font-size: rem(14);
+			line-height: math.div(22, 14);
 		}
 	}
+
 	&__buttons {
-		display: flex;
-		align-items: center;
-		gap: 42px;
-		text-align: center;
-		&_btn {
-			width: 299px;
-			padding: rem(20);
-			font-weight: 500;
-			color: #fff;
-			border-radius: 50%;
-			background-color: #DA4533;
-			@include mq("desktop") {
-				font-size: rem(16);
-				line-height: em(26, 16);
-			}
+		@include flex-v-center;
+
+		@include mq("tablet-small") {
+			gap: 42px;
 		}
-		&_link {
-			padding: rem(6) rem(20);
-			@include mq("desktop") {
-				font-size: rem(16);
-				line-height: em(26, 16);
-			}
+
+		@include mq("tablet-small", max) {
+			@include flex-all-center;
 		}
 	}
+
+	&__btn {
+		@include mq("tablet", range, "desktop") {
+			font-size: 16px;
+			line-height: 160%;
+			/* or 26px */
+		}
+
+		@include mq("tablet-small", max) {
+			align-self: center;
+		}
+	}
+
+	&__link {
+		@include mq("tablet", range, "desktop") {
+			font-size: 16px;
+			line-height: 160%;
+			/* or 26px */
+			padding: 10px 20px;
+		}
+	}
+
 	&__img {
-		height: 400px;
 		flex: 1 1 auto;
-		img {
+
+		@include mq("tablet-small", max) {
+			display: none;
 		}
 	}
 }

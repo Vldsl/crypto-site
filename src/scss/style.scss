@@ -1,115 +1,238 @@
 @use "sass:math";
+@use "sass:map";
 
 @import "vars";
 @import "mixins";
 /*--------------------*/
 /*** Null ***/
 @import "null";
+
 /*--------------------*/
 /*** Fonts ***/
-@import "fonts";
+// @import "fonts";
 // @import "iconsfont";
 /*--------------------*/
-a,
-button {
-	transition: 0.2s;
-}
 body {
 	font-family: $fontFamily;
-	@include font-source-sans(rem(14), 1.1em, 400, $mainColor); // $fontSize
-	// background-color: var(--bg_color);
+	@include font-source-sans(rem($fontSize), 1.1, 400, $primaryColor);
 	font-style: normal;
 	text-align: left;
 	position: relative;
+
 	&.lock {
 		overflow: hidden;
 		touch-action: none;
 	}
 }
+
 .wrapper {
 	width: 100%;
 	min-height: 100%;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
+
+	>main {
+		flex: 1 1 auto;
+	}
+
+	>* {
+		min-width: 0;
+	}
 }
-.container {
+
+.page {
+	&-header {}
+
+	&-title {
+		margin: 0 0 18px 0;
+		font-family: $fontSecondary;
+		color: $primaryAccentColor;
+
+		@include mq("tablet") {
+			font-size: rem(38);
+			line-height: math.div(51, 38);
+		}
+
+		@include mq("tablet-small", range, "tablet") {
+			font-size: rem(32);
+			line-height: math.div(43, 32);
+		}
+
+		@include mq("phone-wide", range, "tablet-small") {
+			font-size: rem(28);
+			line-height: math.div(38, 28);
+		}
+
+		@include mq("phone-wide", max) {
+			font-size: rem(24);
+			line-height: math.div(32, 24);
+		}
+	}
+
+	&-subtitle {
+		margin: 0 0 rem(50) 0;
+		@include flex-sb;
+
+		@include mq("tablet", range, "desktop") {
+			margin: 0 0 rem(39) 0;
+		}
+	}
+
+	&-text {
+		flex: 0 1 700px; // Change
+		font-weight: 500;
+		line-height: math.div(25, 16);
+	}
+
+	// &-link {
+	//   margin: 0 16px 0 0;
+	// }
+	&-consult {
+		width: em(300, 16);
+		padding: em(20, 16);
+		font-weight: 500;
+		line-height: math.div(26, 16);
+		color: $primaryAccentColor;
+		border-radius: 50%;
+		background-color: $brandColor;
+		text-align: center;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+
+		// @include flex-all-center;
+		// @include af("width", 300, 20, 1920, 769);
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		@include mq("tablet-small", max) {
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: block;
+				width: 100%;
+				height: 100%;
+				z-index: 10;
+				border-radius: 50%;
+				border: 1px solid #ffffff;
+				transform: matrix(0.99, -0.11, 0.11, 0.99, 0, 0);
+			}
+		}
+	}
+
+	&-link {
+		padding: em(6, 16) em(20, 16);
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		// @include flex-all-center;
+		text-align: center;
+		font-weight: 500;
+		line-height: math.div(26, 16);
+		color: $brandColor;
+		border: 1px solid #da4533;
+		border-radius: 50%;
+		position: relative;
+
+		&:after,
+		&:before {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			color: #da4533;
+			font-size: 8px;
+		}
+
+		&:before {
+			left: -18px;
+		}
+
+		&:after {
+			right: -18px;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		@include mq("tablet-small", max) {
+			// width: 135px;
+			margin: 20px auto 0 auto;
+		}
+	}
+
+	&-control {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		// @include flex-all-center;
+		width: 40px;
+		height: 40px;
+		color: #da4533;
+		border: 1px solid #da4533;
+		border-radius: 50%;
+		position: relative;
+		cursor: pointer;
+
+		&:after,
+		&:before {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			color: #da4533;
+			font-size: 8px;
+		}
+
+		&:before {
+			left: -18px;
+		}
+
+		&:after {
+			right: -18px;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.container,
+[class*="__container"] {
 	width: 100%;
-	// max-width: 1256px; // 1216px
-	max-width: rem($maxWidthContainer);
+	max-width: rem($maxWidthContainer); // 1216px
 	margin: auto;
 	padding: 0 rem(math.div($containerPadding, 2));
-	// padding: 0 18px;
 }
-.page {
-	flex: 1 1 auto;
-}
+
 section {
 	width: 100%;
-	// padding: rem(160) 0;
+	padding: rem(160) 0;
 	@include bg-cover;
-}
-.section__title {
-	margin: 0px 0px 18px 0px;
-	font-family: $fontSecondary;
-	font-size: rem(38);
-	line-height: math.div(51, 38);
-	color: #fff;
-}
-// .btn {
-	
-// 	&:hover {
-// 		background-color: #1d306d;
-// 		color: var(--white);
-// 	}
-// 	&:disabled {
-// 		opacity: 0.4;
-// 		pointer-events: none;
-// 	}
-// }
-// ._ibg {
-// 	position: relative;
-// 	& img {
-// 		width: 100%;
-// 		height: 100%;
-// 		object-fit: cover;
-// 		position: absolute;
-// 		top: 0;
-// 		left: 0;
-// 	}
-// }
-.btn-link {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	// padding: rem(6) rem(20);
-	font-weight: 500;
-	color: #DA4533;
-	border: 1px solid #DA4533;
-	border-radius: 50%;
-	position: relative;
-	&:after {
-		content: "\e902";
-		position: absolute;
-		top: 50%;
-		right: -18px;
-		transform: translateY(-50%);
-		font-family: 'icomoon' !important;
-		speak: never;
-		font-style: normal;
-		font-weight: normal;
-		font-variant: normal;
-		text-transform: none;
-		line-height: 1;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		color: #DA4533;
-		font-size: 8px;
+
+	@include mq("tablet", range, "desktop") {
+		padding: rem(120) 0;
 	}
-	// @include mq("desktop") {
-	// 	font-size: rem(16);
-	// 	line-height: em(26, 16);
-	// }
+
+	@include mq("phone-wide", range, "tablet") {
+		padding: rem(80) 0;
+	}
+
+	@include mq("phone-wide", max) {
+		padding: rem(60) 0;
+	}
 }
 
 @import "components/header";
@@ -119,4 +242,5 @@ section {
 @import "components/test";
 @import "components/case";
 @import "components/team";
+@import "components/ban";
 @import "components/footer";

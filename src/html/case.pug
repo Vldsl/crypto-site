@@ -1,26 +1,31 @@
 section.case(style="background-image: url('./img/Case/case__bg.jpg')")
-	.container 
-		//- .case__inner
-		h2.case__title Реализованные кейсы
-		.case__subtitle
-			p.case__text Наши реальные истории о том, как мы помогали своим клиентам регистрировать товарные знаки и оформлять права на объекты интеллектуальной собственности
-			a.case__link.btn-link(href="") Все кейсы
-		.case__slider.slider 
-			.slider__body
-				.slider__row
-					.item-slider
-						.item-slider__logo
+	.case__container
+		.case__header.page-header 
+			h2.case__title.page-title Реализованные кейсы
+			.case__subtitle.page-subtitle
+				p.case__text.page-text Наши реальные истории о том, как мы помогали своим клиентам регистрировать товарные знаки и оформлять права на объекты интеллектуальной собственности
+				a.case__link.page-link.icon-r-arrow(href="") Все кейсы
+		.case__content
+			.case__slider.slider-case.swiper
+				.slider-case__body.swiper-wrapper
+					.slider-case__slide.icon-shape.swiper-slide
+						.slider-case__img
 							img(src="./img/Case/case__logo_1.png", alt="")
-						.item-slider__content
-							h3.item-slider__title CIRKLE — производитель косметической продукции
-							p.item-slider__text Как в результате защиты  мы зарегистрировали бренд российской косметики при наличии оснований для отказа
-				.slider__row
-					.item-slider
-						.item-slider__logo
+						.slider-case__content
+							h3.slider-case__title CIRKLE — производитель косметической продукции
+							p.slider-case__text Как в результате защиты  мы зарегистрировали бренд российской косметики при наличии оснований для отказа
+					.slider-case__slide.icon-shape.swiper-slide
+						.slider-case__img
 							img(src="./img/Case/case__logo_2.png", alt="")
-						.item-slider__content
-							h3.item-slider__title Camera IQ — производитель систем машинного зрения
-							p.item-slider__text Защита прав после ребрендинга. Как провести успешную регистрацию
-			.slider__control 
-				.slider__control_btn.btn-next.btn-link
-				.slider__control_btn.btn-prev.btn-link
+						.slider-case__content
+							h3.slider-case__title Camera IQ — производитель систем машинного зрения
+							p.slider-case__text Защита прав после ребрендинга. Как провести успешную регистрацию
+					.slider-case__slide.icon-shape.swiper-slide
+						.slider-case__img
+							img(src="./img/Case/case__logo_3.png", alt="")
+						.slider-case__content
+							h3.slider-case__title HANDS — производитель строительных материалов
+							p.slider-case__text Предварительный отказ — не приговор! Как мы защищали монополию российского производителя строительных материалов.
+				.slider-case__control 
+					.slider-case__btn.page-control.icon-l-arrow.slider-prev
+					.slider-case__btn.page-control.icon-r-arrow.slider-next

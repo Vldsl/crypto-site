@@ -1,68 +1,63 @@
 @font-face {
-	font-family: 'Montserrat';
-	src: local("Montserrat"), local("Montserrat-Regular"),
-			url("./../fonts/Montserrat-Regular.woff2") format("woff2"),
-			url("./../fonts/Montserrat-Regular.woff") format("woff");
+	font-family: Gilroy;
+	font-display: swap;
+	src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
-	font-display: swap;
 }
 @font-face {
-	font-family: 'Montserrat';
-	src: local("Montserrat"), local("Montserrat-Medium"), url("./../fonts/Montserrat-Medium.woff2") format("woff2"),
-		url("./../fonts/Montserrat-Medium.woff") format("woff");
-	font-weight: 500;
-	font-style: normal;
+	font-family: Gilroy;
 	font-display: swap;
-}
-@font-face {
-	font-family: 'Gilroy';
-	src: local("Gilroy"), local("Gilroy-Regular"), url("../fonts/Gilroy-Regular.woff2") format("woff2"),
-	url("../fonts/Gilroy-Regular.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Gilroy';
-	src: local("Gilroy"), local("Gilroy-ExtraBold"),
-				url("../fonts/Gilroy-ExtraBold.woff2") format("woff2"),
-				url("../fonts/Gilroy-ExtraBold.woff") format("woff");
+	src: url("../fonts/Gilroy-ExtraBold.woff2") format("woff2"), url("../fonts/Gilroy-ExtraBold.woff") format("woff");
 	font-weight: 800;
 	font-style: normal;
-	font-display: swap;
-	}
-@font-face {
-  font-family: 'STIX Two Text';
-  src: local('STIX Two Text Regular'), local('STIX-Two-Text-Regular'),
-      url('../fonts/STIXTwoText-Regular.woff2') format('woff2'),
-      url('../fonts/STIXTwoText-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-	font-display: swap;
 }
 @font-face {
-	font-family: 'STIX Two Text';
-	src: local("STIX Two Text Medium"), local("STIX-Two-Text-Medium"), url("../fonts/STIXTwoText-Medium.woff2") format("woff2"),
-		url("../fonts/STIXTwoText-Medium.woff") format("woff");
-	font-weight: 500;
-	font-style: normal;
+	font-family: icomoon;
 	font-display: swap;
-}
-@font-face {
-	font-family: 'STIX Two Text';
-	src: local("STIX Two Text Medium Italic"), local("STIX Two Text Medium-Italic"), url("../fonts/Montserrat-MediumItalic.woff2") format("woff2"),
-		url("../fonts/Montserrat-MediumItalic.woff") format("woff");
-	font-weight: 500;
-	font-style: italic;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Inter';
-	src: local('Inter'), local('Inter-Regular'),
-			url('../fonts/Inter-Regular.woff2') format('woff2'),
-			url('../fonts/Inter-Regular.woff') format('woff');
+	src: url("../fonts/icomoon.woff2") format("woff2"), url("../fonts/icomoon.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
+}
+@font-face {
+	font-family: Inter;
 	font-display: swap;
+	src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: Montserrat;
+	font-display: swap;
+	src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: Montserrat;
+	font-display: swap;
+	src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: STIXTwoText;
+	font-display: swap;
+	src: url("../fonts/STIXTwoText-Medium.woff2") format("woff2"), url("../fonts/STIXTwoText-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: STIXTwoText;
+	font-display: swap;
+	src: url("../fonts/STIXTwoText-MediumItalic.woff2") format("woff2"), url("../fonts/STIXTwoText-MediumItalic.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: STIXTwoText;
+	font-display: swap;
+	src: url("../fonts/STIXTwoText-Regular.woff2") format("woff2"), url("../fonts/STIXTwoText-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
 }

@@ -1,72 +1,156 @@
 .header {
-	width: 100%;
-	padding: rem(10) 0;
-	background: #1B1B1B;
-	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 10;
-	&.fixed {
-		// padding: 1% 0;
-	}
-	&__inner {
-		min-height: rem(50);
-		// @include mq("desktop") {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			align-items: center;
-		// }
-	}
-	&__logo {
-		justify-self: start;
-	}
-	&__contact {
-		justify-self: center;
-		display: flex;
-		gap: rem(20);
-		&_phone {
-			font-weight: 500;
-			color: #FFFFFF;
-			@include mq("desktop") {
-				font-size: rem(18);
-				line-height: em(21.96, 18);
-			}
-		}
-		&_btn {
-			font-weight: 500;
-			color: #DA4533;
-			@include mq("desktop") {
-				font-size: rem(16);
-				line-height: em(26, 16);
-			}
-		}
-	}
-	&__menu {
-		justify-self: end;
-		&_icon {
-		}
-	}
+  width: 100%;
+  padding: rem(10) 0;
+  background: #1b1b1b;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  &.fixed {
+    // padding: 1% 0;
+  }
+  &__container {
+    min-height: rem(50);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    @include mq("tablet-small", range, "desktop") {
+      grid-template-columns: auto 1fr auto;
+    }
+    @include mq("tablet-small", max) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &__logo {
+    justify-self: start;
+  }
+  &__contact {
+    justify-self: center;
+    display: flex;
+    gap: rem(20);
+    @include mq("tablet-small", max) {
+      display: none;
+    }
+    &_phone {
+      @include font-source-sans(rem(18), math.div(22, 18), 500, #fff);
+    }
+    &_btn {
+      font-weight: 500;
+      color: #da4533;
+      line-height: math.div(26, 16);
+    }
+  }
+  &__menu {
+    justify-self: end;
+    &_icon {
+    }
+  }
 }
 .menu {
-	&__list {
-		@include mq("desktop") {
-			display: flex;
-		}
-	}
-	&__item {
-		& + & {
-			@include mq("desktop") {
-				margin: 0px 0px 0px em(35);
-			}
-		}
-	}
-	&__link {
-		font-weight: 500;
-		color: #fff;
-		@include mq("desktop") {
-			font-size: rem(16);
-			line-height: em(32, 16);
-		}
-	}
+  @include mq("tablet", max) {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    height: 100%;
+    width: 80%;
+    padding: 15% 3.9% 3.9% 3.9%;
+    opacity: 0;
+    @include bg-cover;
+    // background-image: url("./../img/Menu/menu__bg.jpg");
+    transition: right 0.3s ease 0s, opacity 0.3s ease 0s;
+    overflow: auto;
+    @include mq("tablet") {
+      background-image: none;
+    }
+    &.active {
+      right: 0;
+      opacity: 1;
+    }
+  }
+  &__list {
+    display: flex;
+  }
+  &__item {
+    & + & {
+      margin: 0 0 0 em(35);
+    }
+  }
+  &__link {
+    font-weight: 500;
+    color: #fff;
+    line-height: math.div(32, 16);
+  }
+}
+.icon-menu {
+  display: none;
+  @include mq("desktop", max) {
+    width: 46px;
+    height: 46px;
+    display: block;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    transition: all 0.3s ease 0s;
+  }
+  & span,
+  &:before,
+  &:after {
+    content: "";
+    height: 2px; // 10%
+    position: absolute;
+    right: 9px; // %
+    transition: all 0.3s ease 0s;
+    background-color: #fff;
+    transition: all 0.3s ease 0s;
+  }
+  &:before {
+    top: 14px; // calc(25% - 1px)
+    width: 48%;
+  }
+  &:after {
+    bottom: 14px; // calc(25% - 1px)
+    width: 35%;
+  }
+  & span {
+    top: calc(50% - 1px);
+    width: 60%;
+  }
+  &.active {
+    & span {
+      transform: scale(0);
+    }
+    &:before {
+      transform: rotate(-45deg);
+      top: calc(50% - 1px);
+    }
+    &:after {
+      transform: rotate(45deg);
+      bottom: calc(50% - 1px);
+    }
+    background: rgba(255, 255, 255, 0.1);
+    & span,
+    &:before,
+    &:after {
+      width: 60%;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        background: rgba(255, 255, 255, 0.15);
+      }
+    }
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      & span,
+      &:before,
+      &:after {
+        width: 60%;
+      }
+    }
+  }
 }

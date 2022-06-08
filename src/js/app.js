@@ -4,28 +4,28 @@
 
 
 // Menu
-// const iconMenu = document.querySelector('.header__menu_icon');
+const iconMenu = document.querySelector('.icon-menu');
 // const page = document.querySelector('.page');
-// const menu = document.querySelector('.menu');
+const menu = document.querySelector('.menu');
 // const menuClose = document.querySelector('.menu__close');
-// if (iconMenu) {
-// 	iconMenu.addEventListener('click', function (e) {
-// 		// iconMenu.classList.add('active');
-// 		document.body.classList.add('lock');
-// 		menu.classList.add('active');
-// 		page.classList.add('active_bg');
-// 	});
-// 	menuClose.addEventListener('click', () => {
-// 		document.body.classList.remove('lock');
-// 		menu.classList.remove('active');
-// 		page.classList.remove('active_bg');
-// 	});
-// 	page.addEventListener('click', () => {
-// 		document.body.classList.remove('lock');
-// 		menu.classList.remove('active');
-// 		page.classList.remove('active_bg');
-// 	});
-// }
+if (iconMenu) {
+	iconMenu.addEventListener('click', function (e) {
+		iconMenu.classList.add('active');
+		document.body.classList.add('lock');
+		menu.classList.add('active');
+		// page.classList.add('active_bg');
+	});
+	// menuClose.addEventListener('click', () => {
+	// 	document.body.classList.remove('lock');
+	// 	menu.classList.remove('active');
+	// 	page.classList.remove('active_bg');
+	// });
+	// page.addEventListener('click', () => {
+	// 	document.body.classList.remove('lock');
+	// 	menu.classList.remove('active');
+	// 	page.classList.remove('active_bg');
+	// });
+}
 
 // Replace header btn
 document.addEventListener('DOMContentLoaded', () => {

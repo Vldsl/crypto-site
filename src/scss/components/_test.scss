@@ -1,132 +1,179 @@
 .test {
-	padding: rem(160) 0px;
-	// &__inner {}
-	&__title {
-		margin: 0px 0px 18px 0px;
-		font-family: 'STIX Two Text';
-		font-size: 38px;
-		line-height: 135%;
-		/* or 51px */
-		color: #FFFFFF;
-	}
-	&__subtitle {
-		margin: 0px 0px 50px 0px;
-		font-weight: 500;
-		font-size: 16px;
-		line-height: 160%;
-		/* identical to box height, or 26px */
-		color: #FFFFFF;
-		opacity: 0.75;
-	}
-	&__quiz {
-		margin: 0px 0px 50px 0px;
-	}
-	&__bonus {
-		&_title {
-			margin: 0px 0px 25px 0px;
-			font-weight: 500;
-			font-size: 24px;
-			line-height: 160%;
-			/* or 38px */
-			color: #FFFFFF;
-		}
-		&_body {
-			display: flex;
-			align-items: center;
-			gap: 20px;
-		}
-		&_item {
-			flex: 0 0 392px;
-			padding: 15px;
-			background: #1B1B1B;
-			border-radius: 10px;
-			display: flex;
-			align-items: center;
-			gap: 15px;
-		}
-		&_img {
-
-		}
-		&_text {
-			// flex: 0 0 246px;
-			font-weight: 500;
-			font-size: 18px;
-			line-height: 160%;
-			/* or 29px */
-			color: #FFFFFF;
-		}
-	}
+  position: relative;
+  &__container {
+  }
+  &__header {
+  }
+  &__title {
+  }
+  &__subtitle {
+  }
+  &__text {
+    color: #fff;
+    opacity: 0.75;
+  }
+  &__quiz {
+    margin: 0 0 50px 0;
+  }
+  &__bonus {
+    &_title {
+      margin: 0 0 25px 0;
+      @include font-source-sans(rem(24), math.div(38, 24), 500, #fff);
+      @include mq("tablet-small", max) {
+        font-size: rem(20);
+        line-height: math.div(30, 20);
+      }
+    }
+    &_body {
+      @include flex-v-center;
+      gap: 20px;
+      @include mq("tablet-small", max) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    &_item {
+      flex: 0 0 392px;
+      padding: 15px;
+      background: #1b1b1b;
+      border-radius: 10px;
+      @include flex-v-center;
+      gap: 15px;
+      @include mq("tablet-small", max) {
+        flex: 1 1 100%;
+      }
+    }
+    &_img {
+    }
+    &_text {
+      @include font-source-sans(rem(18), math.div(29, 18), 500, #fff);
+    }
+  }
+  &__img {
+    position: absolute;
+    top: -100px;
+    right: 30px;
+    width: 40%;
+    @include mq("tablet-small", range, "tablet") {
+      width: 30%;
+    }
+    @include mq("tablet-small", max) {
+      width: 40%;
+      right: 0;
+    }
+    @include mq("phone-wide", max) {
+      top: -90px;
+    }
+  }
 }
-.quiz {
-	padding: 36px 40px;
-	width: 1041px;
-	background: #1B1B1B;
-	border-radius: 10px;
-	&__header {
-		margin: 0px 0px 26px 0px;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	&__title {
-		font-weight: 500;
-		font-size: 24px;
-		line-height: 160%;
-		/* or 38px */
-		color: #FFFFFF;
-	}
-	&__count {
-		font-family: 'STIX Two Text';
-		font-weight: 500;
-		font-size: 36px;
-		line-height: 45px;
-		color: #fff;
-		& span {
-			color: #DA4533;
-
-		}
-	}
-	&__body {
-		margin: 0px 0px 40px 0px;
-		display: grid;
-		grid-gap: 20px;
-		grid-template-columns: repeat(2, 1fr);
-		grid-auto-rows: 10px;
-		grid-auto-flow: row dense;
-		position: relative;
-	}
-	&__item {
-		width: 50%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		padding: 18px 20px;
-		background: rgba(255, 255, 255, 0.05);
-		&.quiz__item-ready {
-			position: static;
-			height: auto;
-			width: auto;
-		}
-		&_text {
-			font-weight: 500;
-			font-size: 16px;
-			line-height: 160%;
-			/* identical to box height, or 26px */
-			color: #FFFFFF;
-		}
-	}
-	&__control{
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		&_btn {
-			padding: 10px 20px;
-		}
-		.btn-next {
-			
-		}
-		.btn-prev {
-
-		}
-	}
+.quiz-test {
+  padding: 36px 40px;
+  width: 1041px;
+  background: #1b1b1b;
+  border-radius: 10px;
+  @include mq("desktop", max) {
+    width: 100%;
+  }
+  @include mq("tablet-small", max) {
+    padding: 20px;
+  }
+  &__header {
+    margin: 0 0 26px 0;
+    @include flex-all-sb;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 160%;
+    /* or 38px */
+    color: #ffffff;
+    @include mq("tablet-small", max) {
+      font-size: rem(20);
+      line-height: math.div(30, 20);
+    }
+  }
+  &__count {
+    font-family: "STIX Two Text";
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 45px;
+    color: #fff;
+    & span {
+      color: #da4533;
+    }
+  }
+  &__body {
+    margin: 0 0 36px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    // @include mq("tablet-small") {
+    //   &-masonry {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 10px;
+    grid-auto-flow: row dense;
+    //   }
+    // }
+  }
+  &__item {
+    padding: rem(18) rem(20);
+    background: rgba(255, 255, 255, 0.05);
+    @include flex-v-center;
+    @include mq("tablet-small") {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+    }
+    @include mq("tablet-small", max) {
+      padding: rem(15);
+    }
+    &.quiz-test__item-ready {
+      position: static;
+      height: auto;
+      width: auto;
+    }
+  }
+  &__text {
+    font-weight: 500;
+    color: #fff;
+    line-height: math.div(26, 16);
+  }
+  &__control {
+    @include flex-all-sb;
+  }
+  &__btn {
+    @include flex-all-center;
+    text-align: center;
+    margin: 0 18px;
+    padding: em(6, 16) em(30, 16);
+    font-weight: 500;
+    line-height: math.div(26, 16);
+    color: $brandColor;
+    border: 1px solid #da4533;
+    border-radius: 50%;
+    position: relative;
+    &:after,
+    &:before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #da4533;
+      font-size: 8px;
+    }
+    &:before {
+      left: -18px;
+    }
+    &:after {
+      right: -18px;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }

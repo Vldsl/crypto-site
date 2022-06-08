@@ -1,37 +1,43 @@
 section.services(style="background-image: url('./img/Services/services__bg.jpg')")
-	.container
-		.services__inner
-			h2.services__title Решения для вашего бизнеса
-			.services__subtitle
-				p.services__subtitle_text У&nbsp;нас есть все необходимые ресурсы для решения любых ваших потребностей в&nbsp;сфере интеллектуальной собственности
-				a.services__subtitle_link.btn-link(href="") Все услуги
-			.services__content
-				.services__slider.slider
-					.slider__container 
-						.slider__item
-							.slider__item_img
-								img(src="./img/Services/services__img_1.png", alt="")
-							.slider__item_title Регистрация товарного знака в&nbsp;Роспатенте
-							.slider__item_text Регистрация прав инновационные устройства, способы или технологии
-							a.slider__item_arrow(href="")
-						.slider__item
-							.slider__item_img
-								img(src="./img/Services/services__img_2.png", alt="")
-							.slider__item_title Регистрация товарного знака в&nbsp;Роспатенте
-							.slider__item_text Регистрация прав инновационные устройства, способы или технологии
-							a.slider__item_arrow(href="")
-						.slider__item
-							.slider__item_img
-								img(src="./img/Services/services__img_3.png", alt="")
-							.slider__item_title Промышленные образцы
-							.slider__item_text Регистрация прав инновационные устройства, способы или технологии
-							a.slider__item_arrow(href="")
-						.slider__item
-							.slider__item_img
-								img(src="./img/Services/services__img_4.png", alt="")
-							.slider__item_title Программы для ЭВМ и&nbsp;Базы данных
-							.slider__item_text Регистрация прав инновационные устройства, способы или технологии
-							a.slider__item_arrow(href="")
-					.slider__buttons 
-						.slider__buttons_next
-						.slider__buttons_prev
+	.services__container
+		.services__header.page-header
+			h2.services__title.page-title Решения для вашего бизнеса
+			.services__subtitle.page-subtitle
+				p.services__text.page-text У&nbsp;нас есть все необходимые ресурсы для решения любых ваших потребностей в&nbsp;сфере интеллектуальной собственности
+				a.services__link.page-link.icon-r-arrow(href="") Все услуги
+		.services__content
+			.services__slider.slider-services.swiper
+				.slider-services__body.swiper-wrapper
+					.slider-services__slide.icon-shape.swiper-slide
+						.slider-services__img
+							img(src="./img/Services/services__img_1.png", alt="")
+						h3.slider-services__title Регистрация товарного знака в&nbsp;Роспатенте
+						.slider-services__text Регистрация прав инновационные устройства, способы или технологии
+						a.slider-services__link(href="#")
+					.slider-services__slide.icon-shape.swiper-slide
+						.slider-services__img
+							img(src="./img/Services/services__img_2.png", alt="")
+						h3.slider-services__title Регистрация товарного знака в&nbsp;Роспатенте
+						.slider-services__text Регистрация прав инновационные устройства, способы или технологии
+						a.slider-services__link(href="")
+					.slider-services__slide.icon-shape.swiper-slide
+						.slider-services__img
+							img(src="./img/Services/services__img_3.png", alt="")
+						h3.slider-services__title Промышленные образцы
+						.slider-services__text Регистрация прав инновационные устройства, способы или технологии
+						a.slider-services__link(href="")
+					.slider-services__slide.icon-shape.swiper-slide
+						.slider-services__img
+							img(src="./img/Services/services__img_4.png", alt="")
+						h3.slider-services__title Программы для ЭВМ и&nbsp;Базы данных
+						.slider-services__text Регистрация прав инновационные устройства, способы или технологии
+						a.slider-services__link(href="")
+					.slider-services__slide.icon-shape.swiper-slide
+						.slider-services__img
+							img(src="./img/Services/services__img_5.png", alt="")
+						h3.slider-services__title Представление интересов, суды
+						.slider-services__text Регистрация прав инновационные устройства, способы или технологии
+						a.slider-services__link(href="")
+				.slider-services__control
+					.slider-services__btn.page-control.icon-l-arrow.slider-prev
+					.slider-services__btn.page-control.icon-r-arrow.slider-next

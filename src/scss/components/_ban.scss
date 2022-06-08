@@ -1,25 +1,41 @@
 .ban {
-  padding: rem(79) 0 rem(79) 0;
-  &__inner {
-    @include flex-all-sb;
+  padding: rem(80) 0;
+  @include mq("phone-wide", range, "desktop") {
+    padding: rem(60) 0;
+  }
+  @include mq("phone-wide", max) {
+    padding: rem(40) 0;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
   }
   &__content {
     flex: 0 1 50%;
+    @include mq("tablet-small", max) {
+      flex: 1 1 100%;
+      text-align: center;
+    }
   }
   &__title {
-    margin: 0 0 17px 0;
   }
   &__subtitle {
-    margin: 0 0 45px 0;
-    font-weight: 500;
-    line-height: math.div(26, 16);
+  }
+  &__text {
     color: $primaryAccentColor;
     opacity: 0.75;
   }
   &__consult {
     background: $secondaryAccentColor;
+    @include mq("tablet-small", max) {
+      margin: auto;
+    }
   }
   &__img {
-    width: 380px;
+    flex: 0 1 auto;
+    @include mq("tablet-small", max) {
+      display: none;
+    }
   }
 }

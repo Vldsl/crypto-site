@@ -1,95 +1,77 @@
 .case {
-	padding: rem(160) 0px;
-	// &__inner {}
-	&__title {
-		margin: 0px 0px 15px 0px;
-		font-family: 'STIX Two Text';
-		font-weight: 400;
-		font-size: 38px;
-		line-height: 135%;
-		/* or 51px */
-		color: #FFFFFF;
-	}
-	&__subtitle {
-		margin: 0px 0px 50px 0px;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	&__text {
-		flex: 0 1 707px;
-		font-weight: 500;
-		font-size: 16px;
-		line-height: 160%;
-		/* or 26px */
-		color: #8A8A8A;
-	}
-	&__link {
-		
-	}
+  &__container {
+  }
+  &__header {
+  }
+  &__title {
+  }
+  &__subtitle {
+  }
+  &__text {
+  }
+  &__link {
+  }
+  &__content {
+  }
+  &__slider {
+  }
 }
-.slider {
-	&__body {
-		margin: 0px -10px 36px -10px;
-		@include flex-v-center;
-	}
-	&__row {
-		flex: 0 1 50%;
-		padding: 0 10px;
-	}
-	&__control {
-		@include flex-all-center;
-		gap: 20px;
-		&_btn {
-			width: 40px;
-			height: 40px;
-			border-radius: 50%;
-			border: 1px solid #DA4533;
-		}
-		.btn-next {
-			
-		}
-		.btn-prev {
-
-		}
-	}
-}
-.item-slider {
-	// Добавить сстрелку
-	min-height: 289px;
-	background: #5C5C5C;
-	border-radius: 8px;
-	display: flex;
-	overflow: hidden;
-	&__logo {
-		flex: 0 1 48%;
-		padding: 125px 20px;
-		background: #8A8A8A;
-		@include flex-all-center;
-		img {
-
-		}
-	}
-	&__content {
-		flex: 0 1 50%;
-		@include flex-all-center;
-		flex-direction: column;
-		padding: 20px 16px 20px 21px;
-	}
-	&__title {
-		margin: 0px 0px 8px 0px;
-		font-weight: 500;
-		font-size: 16px;
-		line-height: 160%;
-		/* or 26px */
-		color: #F9F9F9;
-		
-	}
-	&__text {
-		font-size: 14px;
-		line-height: 165%;
-		/* or 23px */
-		color: #8A8A8A;
-		
-	}
+.slider-case {
+  &__body {
+    margin: 0 0 36px 0;
+  }
+  &__slide {
+    height: 289px;
+    background: #5c5c5c;
+    border-radius: 8px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    &:before {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #5c5c5c;
+      font-size: 40px;
+    }
+    @include mq("phone-wide", max) {
+      height: 320px;
+      flex-direction: column;
+    }
+  }
+  &__img {
+    flex: 0 1 48%;
+    background: #8a8a8a;
+    @include flex-all-center;
+    @include mq("phone-wide", max) {
+      flex: 0 0 31.5%;
+    }
+    img {
+      @include mq("phone-wide", max) {
+        width: 103px;
+      }
+    }
+  }
+  &__content {
+    flex: 0 1 50%;
+    @include flex-all-center;
+    flex-direction: column;
+    padding: 20px 16px 20px 21px;
+  }
+  &__title {
+    margin: 0 0 8px 0;
+    font-weight: 500;
+    color: #f9f9f9;
+    line-height: math.div(26, 16);
+  }
+  &__text {
+    font-size: rem(14);
+    line-height: math.div(23, 14);
+  }
+  &__control {
+    @include flex-all-center;
+    gap: 20px;
+  }
+  &_btn {
+  }
 }

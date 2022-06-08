@@ -1,15 +1,49 @@
-$fontSize: rem(14);
-$fontFamily: 'Montserrat', sans-serif;
-// $font-primary: 'Montserrat', sans-serif;
-$fontSecondary: 'STIX Two Text', serif;
+$fontSize: 16;
+$fontFamily: "Montserrat", sans-serif;
+$fontSecondary: "STIX Two Text", serif;
 
 $maxWidthContainer: 1256;
 $containerPadding: 40;
+$minWidthLayout: 360;
+$maxWidthLayout: 1920;
 
+$white-primary: #fff;
+$white-secondary: #f9f9f9;
+$grey-primary: #8a8a8a;
+$grey-secondary: #5c5c5c;
+$red: #da4533;
+$black: #1b1b1b;
 
-$mainColor: #8A8A8A;
+$primaryColor: $grey-primary;
+$secondaryColor: $grey-secondary;
+$tertiaryColor: $white-secondary;
+$brandColor: $red;
+$primaryAccentColor: $white-primary;
+$secondaryAccentColor: $black;
 
+/*
+main
+$primary:
+$secondary:
+tertiary
 
+@brand-color
+@accent-color
+@inverse-color
+
+@text-color: #999
+@menu-color: @brand-color
+@link-color: @accent-color
+@hr-color: @inverse-color
+
+// $font-primary: 'Montserrat', sans-serif;
+
+*/
+
+// Link
+// normal 303030
+// hover 3b3b3b
+// active 464646
 
 // :root {
 // 	--white: #fff;
@@ -22,4 +56,3 @@ $mainColor: #8A8A8A;
 // 	--main_color: #848FAC;
 // 	--semi_color: #192252;
 // }
-
