@@ -12,38 +12,24 @@
   }
   &__container {
     min-height: rem(50);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
+    display: flex;
     justify-content: space-between;
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    // align-items: center;
+    // justify-content: space-between;
     @include mq("tablet-small", range, "desktop") {
-      grid-template-columns: auto 1fr auto;
+      // grid-template-columns: auto auto;
     }
     @include mq("tablet-small", max) {
-      grid-template-columns: repeat(2, 1fr);
+      // grid-template-columns: repeat(2, 1fr);
     }
   }
   &__logo {
-    justify-self: start;
-  }
-  &__contact {
-    justify-self: center;
-    display: flex;
-    gap: rem(20);
-    @include mq("tablet-small", max) {
-      display: none;
-    }
-    &_phone {
-      @include font-source-sans(rem(18), math.div(22, 18), 500, #fff);
-    }
-    &_btn {
-      font-weight: 500;
-      color: #da4533;
-      line-height: math.div(26, 16);
-    }
+    // justify-self: start;
   }
   &__menu {
-    justify-self: end;
+    // justify-self: end;
     &_icon {
     }
   }

@@ -1,48 +1,69 @@
-@mixin font-face($font-family, $ff-local, $url, $weight, $style: normal) {
-  @font-face {
-    font-family: "#{$font-family}";
-    src: url("#{$url}.eot");
-    src: local("#{$ff-local}"), local("#{$url}"),
-      url("#{$url}.eot?#iefix") format("embedded-opentype"),
-      url("../fonts/#{$url}.woff2") format("woff2"),
-      url("../fonts/#{$url}.woff") format("woff"),
-      url("#{$url}.ttf") format("truetype");
-    font-weight: #{$weight};
-    font-style: $style;
-    font-display: swap;
-  }
-}
+// @mixin font-face($font-family, $ff-local, $url, $weight, $style: normal) {
+//   @font-face {
+//     font-family: "#{$font-family}";
+//     src: url("#{$url}.eot");
+//     src: local("#{$ff-local}"), local("#{$url}"),
+//       url("#{$url}.eot?#iefix") format("embedded-opentype"),
+//       url("../fonts/#{$url}.woff2") format("woff2"),
+//       url("../fonts/#{$url}.woff") format("woff"),
+//       url("#{$url}.ttf") format("truetype");
+//     font-weight: #{$weight};
+//     font-style: $style;
+//     font-display: swap;
+//   }
+// }
+
+// @mixin font-face($font-family, $ff-local, $url, $weight, $style: normal) {
+//   $eot-path: "#{$url}.eot";
+//   $woff2-path: "../fonts/#{$url}.woff2";
+//   $woff-path: "../fonts/#{$url}.woff";
+//   $ttf-path: "#{$url}.ttf";
+
+//   @font-face {
+//     font-family: unquote($font-family);
+//     src: url($eot-path) format("embedded-opentype"),
+//       local(unquote($ff-local)), local(unquote($url)),
+//       url("#{$eot-path}?#iefix") format("embedded-opentype"),
+//       url($woff2-path) format("woff2"),
+//       url($woff-path) format("woff"),
+//       url($ttf-path) format("truetype");
+//     font-weight: $weight;
+//     font-style: $style;
+//     font-display: swap;
+//   }
+// }
+
 /* -------------------------------- */
-//Percent
+// Percent
 @function percent($px, $from) {
   $result: math.div($px, $from) * 100%;
   // $result: ($px / $from) * 100%;
   @return $result;
 }
-//REM
+// REM
 @function rem($px) {
   $result: math.div($px, 16) + rem;
   // $result: ($px / 16) + rem;
   @return $result;
 }
-//EM
+// EM
 @function em($px, $current: 16) {
   $result: math.div($px, $current) + em;
   // $result: ($px / $current) + em;
   @return $result;
 }
-//line height
+// line height
 @function llh($px, $current: 16) {
   $result: math.div($px, $current);
   @return $result;
 }
 /* -------------------------------- */
-@function vw($value, $base: 1920) {
-  @return ($value / $base) * 100vw;
-}
-@function vmin($value, $base: 360) {
-  @return ($value / $base) * 100vmin;
-}
+// @function vw($value, $base: 1920) {
+//   @return ($value / $base) * 100vw;
+// }
+// @function vmin($value, $base: 360) {
+//   @return ($value / $base) * 100vmin;
+// }
 /* -------------------------------- */
 @mixin font-source-sans(
   $size: false,
@@ -53,12 +74,15 @@
   @if $size {
     font-size: $size;
   }
+
   @if $lh {
     line-height: $lh;
   }
+
   @if $weight {
     font-weight: $weight;
   }
+
   @if $colour {
     color: $colour;
   }
@@ -100,25 +124,88 @@ $breakpoints: (
   }
 }
 //========================================================================================================================================================
-@mixin af(
-  $property,
-  $startSize,
-  $minSize,
-  $widthFrom: $maxWidthContainer,
-  $widthTo: $minWidthLayout
-) {
-  $minSizeValue: rem($minSize);
-  $widthTo: math.div($widthTo, 16);
-  $widthFrom: math.div($widthFrom, 16);
-  $addSize: math.div($startSize - $minSize, 16);
-  // @media (min-width: $width) and (max-width: $maxWidth) {
-  #{$property}: calc(
-    #{$minSizeValue} + #{$addSize} *
-      (((100vw - #{$widthTo + rem})) / ((#{$widthFrom - $widthTo})))
-  );
-  // }
-  @debug $minSizeValue;
-}
+// @mixin af(
+//   $property,
+//   $startSize,
+//   $minSize,
+//   $widthFrom: $maxWidthContainer,
+//   $widthTo: $minWidthLayout
+// ) {
+//   $minSizeValue: rem($minSize);
+//   $widthTo: math.div($widthTo, 16);
+//   $widthFrom: math.div($widthFrom, 16);
+//   $addSize: math.div($startSize - $minSize, 16);
+//   // @media (min-width: $width) and (max-width: $maxWidth) {
+//   #{$property}: calc(
+//     #{$minSizeValue} + #{$addSize} *
+//       (((100vw - #{$widthTo + rem})) / ((#{$widthFrom - $widthTo})))
+//   );
+//   // }
+//   @debug $minSizeValue;
+// }
+
+// @mixin af(
+//   $property,
+//   $startSize,
+//   $minSize,
+//   $widthFrom: $maxWidthContainer,
+//   $widthTo: $minWidthLayout
+// ) {
+//   $minSizeValue: rem($minSize);
+//   $widthTo: math.div($widthTo, 16);
+//   $widthFrom: math.div($widthFrom, 16);
+//   $addSize: math.div($startSize - $minSize, 16);
+
+//   @if $widthFrom == 0 {
+//     @error "Invalid value for $widthFrom. Must be greater than 0.";
+//   }
+
+//   @if $widthTo >= $widthFrom {
+//     @error "Invalid values for $widthTo and $widthFrom. $widthTo must be less than $widthFrom.";
+//   }
+
+//   @media (min-width: $widthFrom + rem) and (max-width: $widthTo + rem) {
+//     #{$property}: calc(
+//       #{$minSizeValue} + #{$addSize} * ((100vw - #{$widthTo + rem}) / (#{$widthFrom - $widthTo}))
+//     );
+//   }
+
+//   @debug $minSizeValue;
+// }
+
+// @mixin af(
+//   $property,
+//   $startSize,
+//   $minSize,
+//   $widthFrom: $maxWidthContainer,
+//   $widthTo: $minWidthLayout
+// ) {
+//   $minSizeValue: rem($minSize);
+//   $widthTo: math.div($widthTo, 16);
+//   $widthFrom: math.div($widthFrom, 16);
+//   $addSize: math.div($startSize - $minSize, 16);
+
+//   @if $widthFrom <= 0 {
+//     @error "Invalid value for $widthFrom. Must be greater than 0.";
+//   }
+
+//   @if $widthTo >= $widthFrom {
+//     @error "Invalid values for $widthTo and $widthFrom. $widthTo must be less than $widthFrom.";
+//   }
+
+//   @if $startSize < $minSize {
+//     @error "Invalid values for $startSize and $minSize. $startSize must be greater than or equal to $minSize.";
+//   }
+
+//   @media (min-width: $widthFrom + rem) and (max-width: $widthTo + rem) {
+//     #{$property}: calc(
+//       #{$minSizeValue} + #{$addSize} * ((100vw - #{$widthTo + rem}) / (#{$widthFrom - $widthTo}))
+//     );
+//   }
+
+//   @debug $minSizeValue;
+// }
+
 //========================================================================================================================================================
 @mixin bg-cover {
   background-position: center;

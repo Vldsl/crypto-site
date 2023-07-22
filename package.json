@@ -9,16 +9,27 @@
     "build": "gulp build --build",
     "zip": "gulp deployZIP --build",
     "deploy": "gulp deployFTP --build",
-    "svgSpriteTask": "gulp svgSpriteTask"
+    "sprite": "gulp sprite",
+    "start": "npx tailwindcss -i ./src/scss/style.scss -o ./dist/css/style.css --watch",
+    "prepare": "husky install"
   },
-  "author": "FLS",
+  "lint-staged": {
+    "*.js": "eslint",
+    "*.pug": "pug-lint",
+    "*.scss": "stylelint"
+  },
+  "author": "VLDSLV",
   "license": "ISC",
   "dependencies": {
     "gulp-cli": "^2.3.0"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.18.9",
     "browser-sync": "latest",
     "del": "latest",
+    "eslint": "^8.20.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-clean-css": "latest",
@@ -42,7 +53,17 @@
     "gulp-webp-html-nosvg": "latest",
     "gulp-webpcss": "latest",
     "gulp-zip": "^5.1.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "postcss": "^8.4.14",
+    "pug-lint": "^2.6.0",
     "sass": "latest",
+    "stylelint": "^14.9.1",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^26.0.0",
+    "stylelint-config-standard-scss": "^5.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.3.0",
     "swiper": "latest",
     "vinyl-ftp": "^0.6.1",
     "webp-converter": "2.2.3",

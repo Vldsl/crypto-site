@@ -23,14 +23,14 @@ import { scss } from "./gulp/tasks/scss.js";
 import { js } from "./gulp/tasks/js.js";
 import { images } from "./gulp/tasks/images.js";
 import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";
-import { svgSpriteTask } from "./gulp/tasks/svg-sprive.js";
+import { sprite } from "./gulp/tasks/sprite.js";
 import { zip } from "./gulp/tasks/zip.js";
 import { ftp } from "./gulp/tasks/ftp.js";
 
 // Наблюдатель за изменениями в файлах
 function watcher() {
   gulp.watch(path.watch.files, copy);
-  gulp.watch(path.watch.html, html); //gulp.series(html, ftp)
+  gulp.watch(path.watch.html, html); // gulp.series(html, ftp)
   gulp.watch(path.watch.scss, scss);
   gulp.watch(path.watch.js, js);
   gulp.watch(path.watch.images, images);
@@ -39,10 +39,11 @@ function watcher() {
 // Последовательная обработака шрифтов
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
+const FASFasd = 1
 // Основные задачи
 const mainTasks = gulp.series(
   fonts,
-  gulp.parallel(copy, html, scss, js, images, svgSpriteTask)
+  gulp.parallel(copy, html, scss, js, images, sprite)
 );
 
 // Построение сценариев выполнения задач
@@ -52,7 +53,7 @@ const deployZIP = gulp.series(reset, mainTasks, zip);
 const deployFTP = gulp.series(reset, mainTasks, ftp);
 
 // Экспорт сценариев
-export { svgSpriteTask };
+export { sprite };
 export { dev };
 export { build };
 export { deployZIP };
@@ -60,3 +61,4 @@ export { deployFTP };
 
 // Выполнение сценария по умолчанию
 gulp.task("default", dev);
+

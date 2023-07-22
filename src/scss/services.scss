@@ -1,6 +1,5 @@
 @use "sass:math";
 @use "sass:map";
-
 @import "vars";
 @import "mixins";
 /*--------------------*/
@@ -134,12 +133,13 @@ body {
   }
 }
 
-.container {
+[class*="__container"] {
   width: 100%;
   max-width: rem($maxWidthContainer); // 1216px
   margin: auto;
   padding: 0 rem(math.div($containerPadding, 2));
 }
+
 section {
   width: 100%;
   padding: rem(160) 0;

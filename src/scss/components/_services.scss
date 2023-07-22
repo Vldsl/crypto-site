@@ -38,32 +38,36 @@
       font-size: 40px;
       z-index: 2;
     }
-    &:hover {
-      cursor: pointer;
-      transition: all 0.3s;
-      & .slider-services__link {
-        opacity: 0.3;
-        transition: opacity 0.2s;
-      }
-      &:before {
-        color: #fff;
-        transition: all 0.2s;
-      }
-      & .slider-services__img {
-        transform: scale(0.8);
-        transition: all 0.5s;
-      }
-      & .slider-services__title {
+
+    @media (any-hover: hover) {
+      &:hover {
+        cursor: pointer;
         transition: all 0.3s;
-        color: #fff;
-      }
-      & .slider-services__text {
-        height: 100%;
-        opacity: 1;
-        transition: all 0.3s;
+        & .slider-services__link {
+          opacity: 0.3;
+          transition: opacity 0.2s;
+        }
+        &:before {
+          color: #fff;
+          transition: all 0.2s;
+        }
+        & .slider-services__img {
+          transform: scale(0.8);
+          transition: all 0.5s;
+        }
+        & .slider-services__title {
+          transition: all 0.3s;
+          color: #fff;
+        }
+        & .slider-services__text {
+          height: 100%;
+          opacity: 1;
+          transition: all 0.3s;
+        }
       }
     }
   }
+
   &__img {
     flex: 1 1 auto;
   }

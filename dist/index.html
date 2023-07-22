@@ -7,11 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
     <meta name="theme-color" content="#111111">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/icomoon.css"><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/normalize.css"><link rel="preconnect", href="https://fonts.googleapis.com">
+<link rel="preconnect", href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=STIX+Two+Text:ital,wght@0,400;0,500;1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>IPhub</title>
   </head>
   <body style="background-color: #1B1B1B;">
@@ -21,19 +20,19 @@
       </symbol>
     </svg>
     <div class="wrapper">
-      <header class="header"> 
-        <div class="header__container"> <a class="header__logo" href="#"><img src="./img/Header/logo.svg" alt="Logotype"></a>
-          <div class="header__contact">
-            <p class="header__contact_phone">+7 (888) 888 88 88</p>
-            <button class="header__contact_btn">Получить консультацию</button>
-          </div>
-          <div class="header__menu"> 
+      <header class="header">
+        <div class="header__container"><a class="header__logo" href="#"><img src="./img/Header/logo.svg" alt="Logotype"></a>
+          <div class="header__menu">
             <button class="menu__icon icon-menu" type="button"><span></span></button>
             <nav class="menu" style="background-image: url('./img/Menu/menu__bg.jpg');">
-              <ul class="menu__list"> 
-                <li class="menu__item"> <a class="menu__link" href="#">Услуги</a></li>
-                <li class="menu__item"> <a class="menu__link" href="#">Кейсы</a></li>
-                <li class="menu__item"> <a class="menu__link" href="#">FAQ</a></li>
+              <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link" href="#tutorial">How to start</a></li>
+                <li class="menu__item"><a class="menu__link" href="#about">About</a></li>
+                <li class="menu__item"><a class="menu__link" href="#features">Features</a></li>
+                <li class="menu__item"><a class="menu__link" href="#reviews">Reviews</a></li>
+                <li class="menu__item"><a class="menu__link" href="#block1">Лишний блок 1</a></li>
+                <li class="menu__item"><a class="menu__link" href="#block2">Лишний блок 2</a></li>
+                <li class="menu__item"><a class="menu__link" href="#faq">FAQ</a></li>
               </ul>
             </nav>
           </div>
@@ -41,63 +40,75 @@
       </header>
       <main class="page">
         <section class="intro" style="background-color: #1B1B1B;">
-          <div class="intro__container"> 
-            <div class="intro__content"> 
-              <div class="intro__suptitle">ВАШ IP ПАРТНЕР</div>
-              <h1 class="intro__title icon-l-mark icon-r-mark">Интеллектуальная <span>собственность</span></h1>
-              <div class="intro__text"> 
-                <p>Индивидуальные правовые решения для защиты и охраны ваших нематериальных активов в России и за рубежом</p>
+          <div class="intro__container">
+            <div class="intro__content">
+              <div class="intro__suptitle">Название проекта?</div>
+              <h1 class="intro__title icon-l-mark icon-r-mark">Здесь ключевые слова<span>что мы делаем?</span></h1>
+              <div class="intro__text">
+                <p>Здесь описание проекта?. Дизайн которые сейчас на этом сайте желательно изменить. Нужно добавить больше атрибутов связанных с криптой ибо хуэта какая-то.</p>
               </div>
               <div class="intro__buttons">
-                <button class="intro__consult page-consult" type="button">Получить индивидуальную консультацию</button>
-                <div class="intro__link page-link icon-r-arrow">Все услуги</div>
+                <button class="intro__consult page-consult" type="button">Зарегистрироваться?</button>
+                <div class="intro__link page-link icon-r-arrow">Эта кнопка нужна?</div>
               </div>
             </div>
             <div class="intro__img"><img src="./img/Intro/intro-img-1.png" alt="Image on main page"></div>
           </div>
         </section>
-        <section class="exp">
-          <div class="exp__container"> 
+        <section class="about" id="about" style="background-image: url('./img/Services/services__bg.jpg')">
+          <div class="about__container">
+            <div class="about__img"><img src="./img/Exp/exp-img.png" alt=""></div>
+            <div class="about__content">
+              <h2 class="about__title page-title">Здесь коротко писать про нас?</h2>
+              <div class="about__text">
+                <p>Наша компания была создана в&nbsp;2019 году специалистами, имеющими опыт работы в&nbsp;сфере интеллектуальной собственности более 20&nbsp;лет</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, praesentium voluptas. Est, ex. Eligendi amet voluptatibus hic ut repellendus vero doloribus nobis veniam minima. Vitae, blanditiis? Tempore modi sequi sint ullam repellendus distinctio molestias hic, est dolor eveniet tempora, reprehenderit quis adipisci labore deserunt omnis. Accusamus quia enim veniam numquam atque ipsum doloremque, ut consequatur quibusdam dolores earum voluptatibus repellendus officiis pariatur autem adipisci possimus. In eveniet voluptatum corrupti quisquam eaque exercitationem autem assumenda velit impedit itaque error sequi libero laborum temporibus deleniti earum est alias, reprehenderit odio dignissimos aspernatur! Molestiae quam alias necessitatibus sapiente non quod laboriosam, repellendus deserunt!</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="exp" id="features">
+          <div class="exp__container">
             <div class="exp__img"><img src="./img/Exp/exp-img.png" alt=""></div>
             <div class="exp__content">
               <div class="exp__block">
-                <h2 class="exp__block_title page-title">Многолетний опыт</h2>
-                <div class="exp__block_text"> 
+                <h2 class="exp__block_title page-title">Здесь пишу наши особенности?</h2>
+                <div class="exp__block_text">
                   <p>Наша компания была создана в&nbsp;2019 году специалистами, имеющими опыт работы в&nbsp;сфере интеллектуальной собственности более 20&nbsp;лет</p>
                 </div>
-                <div class="exp__items"> 
+                <div class="exp__items">
                   <div class="exp__item">
-                    <div class="exp__item_title">&gt;300</div>
-                    <p class="exp__item_text">Представления интересов <br> в&nbsp;спорах по&nbsp;IP правам в&nbsp;год</p>
+                    <div class="exp__item_title">Safe and Secure</div>
+                    <p class="exp__item_text">Здесь что-то о безопасности нашего проекта</p>
                   </div>
                   <div class="exp__item">
-                    <div class="exp__item_title">&gt;2500</div>
-                    <p class="exp__item_text">Оказаний юридической <br> помощи компаниям в&nbsp;год</p>
+                    <div class="exp__item_title">Earnings Program</div>
+                    <p class="exp__item_text">Здесь что-то о нашей программе заработка</p>
                   </div>
                   <div class="exp__item">
-                    <div class="exp__item_title">1150</div>
-                    <p class="exp__item_text">Завершённых дел <br> по&nbsp;регистрации товарных знаков</p>
+                    <div class="exp__item_title">Fast Transactions</div>
+                    <p class="exp__item_text">Здесь о том что у нас быстрые транзакции</p>
                   </div>
                   <div class="exp__item">
-                    <div class="exp__item_title">61</div>
-                    <p class="exp__item_text">Совокупный опыт <br> экспертов</p>
+                    <div class="exp__item_title">Нам доверяют</div>
+                    <p class="exp__item_text">Здесь что-то о доверии</p>
                   </div>
                   <div class="exp__item">
-                    <div class="exp__item_title">99&#37;</div>
-                    <p class="exp__item_text">Успех получения <br> патентов</p>
+                    <div class="exp__item_title">24/7 Support</div>
+                    <p class="exp__item_text">Здесь о том что у нас есть круглосуточная поддержка</p>
                   </div>
                   <div class="exp__item">
-                    <div class="exp__item_title">98&#x25;</div>
-                    <p class="exp__item_text">Успех регистрации <br> товарных знаков</p>
+                    <div class="exp__item_title">Пустое поле</div>
+                    <p class="exp__item_text">Здесь можно что-то ещё написать. Таких полей может быть много.</p>
                   </div>
                 </div>
               </div>
               <div class="exp__block">
-                <div class="exp__block_title page-title">Подтвержденный практикой</div>
-                <div class="exp__block_text"> 
-                  <p>Мы&nbsp;и&nbsp;наши клиенты гордимся опытом, который подтверждается нашими результатами от&nbsp;закрепления прав заявителей до&nbsp;успешной защиты интересов</p>
+                <div class="exp__block_title page-title">Поддерживающие кошельки</div>
+                <div class="exp__block_text">
+                  <p>Здесь можно вставить иконки кошельков, хотя кошельки должны будут все работать. Или здесь можно о чём-то другом написать.</p>
                 </div>
-                <div class="exp__items"> 
+                <div class="exp__items">
                   <div class="exp__item item-logo"><img class="exp__item_img" src="./img/Exp/exp__logo_1.png" alt=""></div>
                   <div class="exp__item item-logo"><img class="exp__item_img" src="./img/Exp/exp__logo_2.png" alt=""></div>
                   <div class="exp__item item-logo"><img class="exp__item_img" src="./img/Exp/exp__logo_3.png" alt=""></div>
@@ -109,12 +120,26 @@
             </div>
           </div>
         </section>
-        <section class="services" style="background-image: url('./img/Services/services__bg.jpg')">
+        <section class="ban" id="tutorial" style="background-image: url('./img/Ban/ban__bg.jpg')">
+          <div class="ban__container">
+            <div class="ban__content">
+              <div class="ban__header page-header">
+                <h2 class="ban__title page-title">Здесь можно рассказать или показать видео о том как наш сайт работает</h2>
+                <div class="ban__subtitle page-subtitle">
+                  <p class="ban__text page-text">У нас есть решения для всех ваших потребностей в сфере защиты и регистрации интеллектуальной собственности</p>
+                </div>
+              </div>
+              <button class="ban__consult page-consult" type="button">Получить индивидуальную консультацию</button>
+            </div>
+            <div class="ban__img"><img src="./img/Ban/ban__img.png" alt=""></div>
+          </div>
+        </section>
+        <section class="services" id="reviews" style="background-image: url('./img/Services/services__bg.jpg')">
           <div class="services__container">
             <div class="services__header page-header">
-              <h2 class="services__title page-title">Решения для вашего бизнеса</h2>
-              <div class="services__subtitle page-subtitle">
-                <p class="services__text page-text">У&nbsp;нас есть все необходимые ресурсы для решения любых ваших потребностей в&nbsp;сфере интеллектуальной собственности</p><a class="services__link page-link icon-r-arrow" href="">Все услуги</a>
+              <h2 class="services__title page-title">Здесь отзывы?</h2>
+              <div class="services__subtitle page-subtitle"> 
+                <p class="services__text page-text">Здесь можно писать фейковые отзывы от людей, можно даже понаходить липовые фото людей. Может создать страничку с отзывами?</p><a class="services__link page-link icon-r-arrow" href="">Все отзывы?</a>
               </div>
             </div>
             <div class="services__content">
@@ -122,27 +147,27 @@
                 <div class="slider-services__body swiper-wrapper">
                   <div class="slider-services__slide icon-shape swiper-slide">
                     <div class="slider-services__img"><img src="./img/Services/services__img_1.png" alt=""></div>
-                    <h3 class="slider-services__title">Регистрация товарного знака в&nbsp;Роспатенте</h3>
+                    <h3 class="slider-services__title">Вы смотретите на первый отзыв</h3>
                     <div class="slider-services__text">Регистрация прав инновационные устройства, способы или технологии</div><a class="slider-services__link" href="#"></a>
                   </div>
                   <div class="slider-services__slide icon-shape swiper-slide">
                     <div class="slider-services__img"><img src="./img/Services/services__img_2.png" alt=""></div>
-                    <h3 class="slider-services__title">Регистрация товарного знака в&nbsp;Роспатенте</h3>
+                    <h3 class="slider-services__title">Вы смотретите на второй отзыв</h3>
                     <div class="slider-services__text">Регистрация прав инновационные устройства, способы или технологии</div><a class="slider-services__link" href=""></a>
                   </div>
                   <div class="slider-services__slide icon-shape swiper-slide">
                     <div class="slider-services__img"><img src="./img/Services/services__img_3.png" alt=""></div>
-                    <h3 class="slider-services__title">Промышленные образцы</h3>
+                    <h3 class="slider-services__title">Вы смотретите на третий отзыв</h3>
                     <div class="slider-services__text">Регистрация прав инновационные устройства, способы или технологии</div><a class="slider-services__link" href=""></a>
                   </div>
                   <div class="slider-services__slide icon-shape swiper-slide">
                     <div class="slider-services__img"><img src="./img/Services/services__img_4.png" alt=""></div>
-                    <h3 class="slider-services__title">Программы для ЭВМ и&nbsp;Базы данных</h3>
+                    <h3 class="slider-services__title">Вы смотретите на четвертый отзыв</h3>
                     <div class="slider-services__text">Регистрация прав инновационные устройства, способы или технологии</div><a class="slider-services__link" href=""></a>
                   </div>
                   <div class="slider-services__slide icon-shape swiper-slide">
                     <div class="slider-services__img"><img src="./img/Services/services__img_5.png" alt=""></div>
-                    <h3 class="slider-services__title">Представление интересов, суды</h3>
+                    <h3 class="slider-services__title">Вы смотретите на пятый отзыв</h3>
                     <div class="slider-services__text">Регистрация прав инновационные устройства, способы или технологии</div><a class="slider-services__link" href=""></a>
                   </div>
                 </div>
@@ -154,61 +179,9 @@
             </div>
           </div>
         </section>
-        <section class="test" style="background-image: url('./img/Test/test__bg.jpg')">
-          <div class="test__container"> 
-            <div class="test__header page-header">
-              <h2 class="test__title page-title">Не&nbsp;знаете, что вам нужно?</h2>
-              <div class="test__subtitle page-subtitle">
-                <p class="test__text page-text">Пройдите квиз, чтобы выбрать оптимальное решение для Вашей задачи</p>
-              </div>
-            </div>
-            <div class="test__quiz quiz-test">
-              <div class="quiz-test__header">
-                <div class="quiz-test__title">С&nbsp;какой целью вы&nbsp;обращаетесь?</div>
-                <div class="quiz-test__count"><span>2</span>/8</div>
-              </div>
-              <div class="quiz-test__body">
-                <div class="quiz-test__item">
-                  <p class="quiz-test__text">Регистрацию полезной модели</p>
-                </div>
-                <div class="quiz-test__item">
-                  <p class="quiz-test__text">Регистрацию промышленного образца</p>
-                </div>
-                <div class="quiz-test__item">
-                  <p class="quiz-test__text">Регистрацию прав на использование полезной модели, промобразца, изобретенния</p>
-                </div>
-                <div class="quiz-test__item">
-                  <p class="quiz-test__text">Подготовка заявки на выдачу патента</p>
-                </div>
-                <div class="quiz-test__item">
-                  <p class="quiz-test__text">Подготовка заявки на передачу прав патента</p>
-                </div>
-                <div class="quiz-test__item">
-                  <p class="quiz-test__text"> Регистрацию изобретения</p>
-                </div>
-              </div>
-              <div class="quiz-test__control">
-                <div class="quiz-test__btn icon-l-arrow">Далее</div>
-                <div class="quiz-test__btn icon-r-arrow">Назад</div>
-              </div>
-            </div>
-            <div class="test__bonus">
-              <h3 class="test__bonus_title">Бонусы после прохождения</h3>
-              <div class="test__bonus_body">
-                <div class="test__bonus_item"><img class="test__bonus_img" src="./img/Test/bonus__img_1.png" alt="">
-                  <p class="test__bonus_text">Название бонуса в&nbsp;одну или две строки</p>
-                </div>
-                <div class="test__bonus_item"><img class="test__bonus_img" src="./img/Test/bonus__img_2.png" alt="">
-                  <p class="test__bonus_text">Название бонуса в&nbsp;одну или две строки</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="test__img" src="" alt=""><img src="./img/Test/test__img.png" alt=""></div>
-        </section>
-        <section class="case" style="background-image: url('./img/Case/case__bg.jpg')">
+        <section class="case" id="block1" style="background-image: url('./img/Case/case__bg.jpg')">
           <div class="case__container">
-            <div class="case__header page-header"> 
+            <div class="case__header page-header">
               <h2 class="case__title page-title">Реализованные кейсы</h2>
               <div class="case__subtitle page-subtitle">
                 <p class="case__text page-text">Наши реальные истории о том, как мы помогали своим клиентам регистрировать товарные знаки и оформлять права на объекты интеллектуальной собственности</p><a class="case__link page-link icon-r-arrow" href="">Все кейсы</a>
@@ -239,7 +212,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="slider-case__control"> 
+                <div class="slider-case__control">
                   <div class="slider-case__btn page-control icon-l-arrow slider-prev"></div>
                   <div class="slider-case__btn page-control icon-r-arrow slider-next"></div>
                 </div>
@@ -247,7 +220,7 @@
             </div>
           </div>
         </section>
-        <section class="team" style="background-image: url('./img/Team/team__bg.jpg')">
+        <section class="team" id="block2" style="background-image: url('./img/Team/team__bg.jpg')">
           <div class="team__container">
             <div class="team__header page-header">
               <h2 class="team__title page-title">Команда экспертов</h2>
@@ -294,13 +267,13 @@
                   </div>
                 </div>
               </div>
-              <div class="slider-team__control"> 
+              <div class="slider-team__control">
                 <div class="slider-team__btn page-control icon-l-arrow slider-prev"></div>
                 <div class="slider-team__btn page-control icon-r-arrow slider-next"></div>
               </div>
             </div>
             <div class="team__forums forums-team">
-              <div class="forums-team__header"> 
+              <div class="forums-team__header">
                 <div class="forums-team__title">Мы на форумах</div>
                 <div class="forums-team__control">
                   <div class="forums-team__btn btn-prev disabled">Прошедшие</div>
@@ -344,42 +317,65 @@
             </div>
           </div>
         </section>
-        <section class="ban" style="background-image: url('./img/Ban/ban__bg.jpg')">
-          <div class="ban__container">
-            <div class="ban__content"> 
-              <div class="ban__header page-header">
-                <h2 class="ban__title page-title">Оставьте заявку на консультацию и мы вам поможем! </h2>
-                <div class="ban__subtitle page-subtitle">
-                  <p class="ban__text page-text">У нас есть решения для всех ваших потребностей в сфере защиты и регистрации интеллектуальной собственности</p>
+        <section class="test" id="faq" style="background-image: url('./img/Test/test__bg.jpg')">
+          <div class="test__container">
+            <div class="test__header page-header">
+              <h2 class="test__title page-title">Здесь может написать типа часто задаваемые вопросы?</h2>
+              <div class="test__subtitle page-subtitle">
+                <p class="test__text page-text">Вопросы на которые вы можете получить ответ здесь</p>
+              </div>
+            </div>
+            <div class="test__quiz quiz-test">
+              <div class="quiz-test__header">
+                <div class="quiz-test__title">С&nbsp;какой целью вы&nbsp;обращаетесь?</div>
+                <div class="quiz-test__count"><span>2</span>/8</div>
+              </div>
+              <div class="quiz-test__body">
+                <div class="quiz-test__item">
+                  <p class="quiz-test__text">Регистрацию полезной модели</p>
+                </div>
+                <div class="quiz-test__item">
+                  <p class="quiz-test__text">Регистрацию промышленного образца</p>
+                </div>
+                <div class="quiz-test__item">
+                  <p class="quiz-test__text">Регистрацию прав на использование полезной модели, промобразца, изобретенния</p>
+                </div>
+                <div class="quiz-test__item">
+                  <p class="quiz-test__text">Подготовка заявки на выдачу патента</p>
+                </div>
+                <div class="quiz-test__item">
+                  <p class="quiz-test__text">Подготовка заявки на передачу прав патента</p>
+                </div>
+                <div class="quiz-test__item">
+                  <p class="quiz-test__text"> Регистрацию изобретения</p>
                 </div>
               </div>
-              <button class="ban__consult page-consult" type="button">Получить индивидуальную консультацию</button>
+              <div class="quiz-test__control">
+                <div class="quiz-test__btn icon-l-arrow">Далее</div>
+                <div class="quiz-test__btn icon-r-arrow">Назад</div>
+              </div>
             </div>
-            <div class="ban__img"> <img src="./img/Ban/ban__img.png" alt=""></div>
+            <div class="test__bonus">
+              <h3 class="test__bonus_title">Бонусы после прохождения</h3>
+              <div class="test__bonus_body">
+                <div class="test__bonus_item"><img class="test__bonus_img" src="./img/Test/bonus__img_1.png" alt="">
+                  <p class="test__bonus_text">Название бонуса в&nbsp;одну или две строки</p>
+                </div>
+                <div class="test__bonus_item"><img class="test__bonus_img" src="./img/Test/bonus__img_2.png" alt="">
+                  <p class="test__bonus_text">Название бонуса в&nbsp;одну или две строки</p>
+                </div>
+              </div>
+            </div>
           </div>
+          <div class="test__img" src="" alt=""><img src="./img/Test/test__img.png" alt=""></div>
         </section>
       </main>
       <footer class="footer" style="background-image: url('./img/Footer/footer__bg.jpg')">
-        <div class="footer__container"> 
+        <div class="footer__container">
           <div class="footer__top"><img class="footer__logo" src="./img/Footer/footer__logo.svg" alt="">
             <p class="footer__descriptioon">Общество с ограниченной ответственностью «Центр интеллектуальной собственности и инноваций „АйПиХаб“»</p>
-            <div class="footer__location">
-              <p class="footer__street">123317, г. Москва, Пресненская наб., д. 8, стр. 1, эт. 3, п. 1, оф. 10</p>
-              <div class="footer__code"> 
-                <p>ИНН: <span>7703472433</span></p>
-                <p>КПП: <span>770301001</span></p>
-              </div>
-            </div>
           </div>
-          <div class="footer__body"> 
-            <div class="footer__column">
-              <h4 class="footer__title">Навигация по сайту:</h4>
-              <ul class="footer__nav">
-                <li class="footer__item"><a class="footer__link" href="">Услуги</a></li>
-                <li class="footer__item"><a class="footer__link" href="">Кейсы</a></li>
-                <li class="footer__item"><a class="footer__link" href=""> FAQ</a></li>
-              </ul>
-            </div>
+          <div class="footer__body">
             <div class="footer__column">
               <h4 class="footer__title">Наши контакты:</h4>
               <ul class="footer__nav">
@@ -394,12 +390,6 @@
                 <li class="footer__item"><a class="footer__link" href="">Instagram</a></li>
               </ul>
             </div>
-            <div class="footer__column">
-              <h4 class="footer__title">Как добраться:</h4>
-              <ul class="footer__nav">
-                <li class="footer__item"><a class="footer__link" href="">Схема проезда</a></li>
-              </ul>
-            </div>
           </div>
           <div class="footer__copy">
             <p class="footer__rights">&copy;&nbsp;2021&nbsp;IPhub. Все права защищены.</p>
@@ -410,6 +400,6 @@
       </footer>
     </div>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="js/app.min.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

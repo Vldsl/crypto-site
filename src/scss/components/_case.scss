@@ -1,25 +1,26 @@
 .case {
-  &__container {
-  }
-  &__header {
-  }
-  &__title {
-  }
-  &__subtitle {
-  }
-  &__text {
-  }
-  &__link {
-  }
-  &__content {
-  }
-  &__slider {
-  }
+  &__container {}
+
+  &__header {}
+
+  &__title {}
+
+  &__subtitle {}
+
+  &__text {}
+
+  &__link {}
+
+  &__content {}
+
+  &__slider {}
 }
+
 .slider-case {
   &__body {
-    margin: 0 0 36px 0;
+    margin: 0 0 rem(36) 0;
   }
+
   &__slide {
     height: 289px;
     background: #5c5c5c;
@@ -27,6 +28,7 @@
     display: flex;
     overflow: hidden;
     position: relative;
+
     &:before {
       position: absolute;
       top: 20px;
@@ -34,44 +36,52 @@
       color: #5c5c5c;
       font-size: 40px;
     }
+
     @include mq("phone-wide", max) {
       height: 320px;
       flex-direction: column;
     }
   }
+
   &__img {
     flex: 0 1 48%;
     background: #8a8a8a;
     @include flex-all-center;
+
     @include mq("phone-wide", max) {
       flex: 0 0 31.5%;
     }
+
     img {
       @include mq("phone-wide", max) {
         width: 103px;
       }
     }
   }
+
   &__content {
     flex: 0 1 50%;
     @include flex-all-center;
     flex-direction: column;
     padding: 20px 16px 20px 21px;
   }
+
   &__title {
     margin: 0 0 8px 0;
     font-weight: 500;
     color: #f9f9f9;
     line-height: math.div(26, 16);
   }
+
   &__text {
     font-size: rem(14);
     line-height: math.div(23, 14);
   }
+
   &__control {
     @include flex-all-center;
     gap: 20px;
   }
-  &_btn {
-  }
+
+  &_btn {}
 }
